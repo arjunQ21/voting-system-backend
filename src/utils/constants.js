@@ -2,7 +2,8 @@ const path = require("path")
 
 module.exports.otpPurpose = {
     verification: 'verification',
-    recovery: 'recovery'
+    recovery: 'recovery',
+    voting: "voting"
 }
 
 module.exports.otpMethod = {
@@ -19,15 +20,9 @@ module.exports.JsendStatus = {
 
 module.exports.pathSeparator = path.sep ;
 
-
-module.exports.ringPattern = {
-    tringtring: 'tringtring',
-    kirrkirr: 'kirrkirr',
-}
-
-module.exports.bellType = {
-    bell: 'bell',
-    speaker: 'speaker',
+module.exports.votingStatus = {
+    hidden: "hidden",
+    shown: "shown",
 }
 
 module.exports.totalPeriods = 20

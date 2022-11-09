@@ -28,6 +28,11 @@ if (config.env !== 'test') {
 
 app.use(JWT.capturer) ;
 
+// app.use(function(req, res, next){
+//   console.log("req.userFromJWT", req.headers) ;
+//   next() ;
+// })
+
 app.use(customErrorLayer)
 
 // set security HTTP headers

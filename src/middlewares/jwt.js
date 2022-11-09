@@ -12,7 +12,7 @@ const JWT = {
             const userId = payload['sub'];
             req.userFromJWT = await User.findById(userId);
         } catch (e) {
-            console.log("User Session not found.") ;
+            console.log("User Session not found: " + e.toString()) ;
         }
         return next();
     },

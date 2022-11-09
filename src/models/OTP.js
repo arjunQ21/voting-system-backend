@@ -50,10 +50,10 @@ otpSchema.methods.send = async function () {
   if (this.sendingMethod == otpMethod.email) {
     return sendEmail(
       this.receiverAddress,
-      `${this.code} is your ${this.purpose} code for Bell Control.`,
+      `${this.code} is your ${this.purpose} code for ePolling.`,
       `Dear User,
 
-Your password ${this.purpose} code for Bell Control is:
+Your ${this.purpose == otpPurpose.voting ? 'voting' : 'password ' + this.purpose} code for ePolling is:
 
 ${this.code}
 

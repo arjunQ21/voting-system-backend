@@ -1,12 +1,8 @@
 const express = require('express');
+const { pathSeparator } = require('../utils/constants');
 const authRoute = require('./auth.route');
 const userRoute = require('./user.route');
-const JWT = require('../middlewares/jwt');
-const jsend = require('../utils/jsend');
-const handleValidationErrors = require('../middlewares/handleValidationErrors');
-const catchAsync = require('../utils/catchAsync');
-const { param } = require('express-validator');
-
+const fs = require('fs');
 const router = express.Router();
 
 router.get('/', function (req, res) {
@@ -27,5 +23,14 @@ const defaultRoutes = [
 defaultRoutes.forEach((route) => {
   router.use(route.path, route.route);
 });
+
+const dirPath = 'src/images'.split('/').join(pathSeparator);
+if (!fs.existsSync(dirPath)) {
+  fs.mkdirSync(dirPath);
+  console.log('Created new Directory ' + dirPath);
+}
+router.use('/' + 'images', express.static(dirPath));
+
+router.use('/votings', require('./voting'));
 
 module.exports = router;

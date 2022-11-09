@@ -3,6 +3,8 @@ const validator = require('validator');
 const bcrypt = require('bcryptjs');
 const { toJSON, paginate } = require('./plugins');
 const { roles } = require('../config/roles');
+const Vote = require('./vote');
+const Candidate = require('./candidate');
 
 const userSchema = mongoose.Schema(
   {
@@ -46,12 +48,12 @@ const userSchema = mongoose.Schema(
     },
     phone: {
       type: String,
-      validate(value){
-        if(!value.match(/^\d{7,12}$/)){
+      validate(value) {
+        if (!value.match(/^\d{7,12}$/)) {
           throw new Error('Invalid phone number');
         }
-      }
-    }
+      },
+    },
   },
   {
     timestamps: true,
@@ -90,9 +92,14 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
-/**
- * @typedef User
- */
+userSchema.methods.votesIn = async function (votingId) {
+  const user = this;
+  return await Vote.find({
+    candidate: { $in: (await Candidate.find({ voting: mongoose.Types.ObjectId(votingId.toString()) }, '_id')).map((c) => c._id) },
+    user: user._id,
+  });
+};
+
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;

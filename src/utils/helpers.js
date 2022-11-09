@@ -7,3 +7,10 @@ module.exports.wait = function (duration) {
         }, duration)
     });
 }
+
+module.exports.formattedImagePath = function (req, imagePath) {
+    let paths = imagePath.split("/");
+    const first = paths.shift();
+    if (first != 'src') throw new Error("Image path should start from src folder.");
+    return (req.protocol === 'https') ? 'https' : 'http' + "://" + req.headers.host + "/" + paths.join("/");
+}
