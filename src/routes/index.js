@@ -6,7 +6,7 @@ const fs = require('fs');
 const router = express.Router();
 
 router.get('/', function (req, res) {
-  res.send('Good Boy 1');
+  res.send('Voting Backend for Flutter Bootcamp');
 });
 
 const defaultRoutes = [
