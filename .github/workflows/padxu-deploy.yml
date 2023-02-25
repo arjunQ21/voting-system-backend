@@ -27,3 +27,12 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
           # EXCLUDE: "/node_modules/"
+          SCRIPT_AFTER: |
+            echo "CDing into ${{ secrets.REMOTE_TARGET }}"
+            cd ${{ secrets.REMOTE_TARGET }}
+            echo "Creating .htaccess file"
+            touch .htaccess
+            echo "Stopping server"
+            cloudlinux-selector stop --json --interpreter nodejs --user ${{ secrets.REMOTE_USER }} --app-root ${{ secrets.REMOTE_TARGET }}
+            echo "Starting server"
+            cloudlinux-selector start --json --interpreter nodejs --user ${{ secrets.REMOTE_USER }} --app-root ${{ secrets.REMOTE_TARGET }}
