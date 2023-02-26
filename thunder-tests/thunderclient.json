@@ -1,0 +1,3735 @@
+[
+  {
+    "_id": "37e428a0-fe01-4c4e-ba84-220ad43e5acf",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "bca65f13-5e87-4cb5-8d19-9f543231cf36",
+    "name": "login",
+    "url": "{{BASE_URL}}/auth/login",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-04-27T15:27:30.078Z",
+    "modified": "2022-12-20T14:09:25.492Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"email\": \"business_admin@woitr.com\",\n    \"password\": \"asdfasdf1\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.data.tokens.access.token",
+        "action": "setto",
+        "value": "{{AUTH_TOKEN}}"
+      }
+    ]
+  },
+  {
+    "_id": "f92e883f-de64-415d-8a46-975b36884ac3",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "ac5ccb56-3b18-498a-9cff-d262d5b62a6d",
+    "name": "socket status",
+    "url": "{{BASE_URL}}/admin/socketStatus",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-04-27T15:30:52.764Z",
+    "modified": "2022-04-27T15:32:34.941Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "245fd45b-0468-41b8-a708-38bce1a984bb",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "97b18a23-9fd1-4405-b700-dce2859445db",
+    "name": "Scan",
+    "url": "{{BASE_URL}}/businesses/coco-beach/spots/table-1/scan",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2022-05-01T11:14:38.691Z",
+    "modified": "2022-05-01T12:28:33.781Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      },
+      {
+        "name": "x-otaccess",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmRlcnRva2VucyI6WyI2MjZlN2M3Y2U4YzZiYTI1NTE4N2M2ODYiLCI2MjZlN2NhZWU4YzZiYTI1NTE4N2M2OWUiXSwiaWF0IjoxNjUxNDA3OTk2fQ.mVubniRCUGCasUjuabXirJLsvRetR_kJhyvg_i4np6U"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "3436bac7-fdd3-4a7a-8695-b106b3779c1d",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "fb29d0c3-6ccf-4145-a6ad-53f244ae7ea4",
+    "name": "me",
+    "url": "{{BASE_URL}}/users/me",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-05-01T11:23:43.804Z",
+    "modified": "2022-08-03T04:36:27.427Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "e098452e-fd75-4094-aadc-d7037ded63e7",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "157352df-b79a-4c12-a31b-25143667d08d",
+    "name": "/",
+    "url": "{{BASE_URL}}/businesses/coco-beach/order_tokens/62aef47fa6622a144a2092ec",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-05-01T11:40:39.859Z",
+    "modified": "2022-06-19T17:09:57.180Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "c5e01c82-d4eb-4a78-b8e2-a4b17cbae398",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "97b18a23-9fd1-4405-b700-dce2859445db",
+    "name": "Create New Order",
+    "url": "{{BASE_URL}}/businesses/deurali-restaurant/spots/table-1/orders",
+    "method": "POST",
+    "sortNum": 70000,
+    "created": "2022-05-01T12:23:36.852Z",
+    "modified": "2022-12-31T07:34:25.220Z",
+    "headers": [
+      {
+        "name": "x-otaccess",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmRlcnRva2VucyI6WyI2MjZlN2M3Y2U4YzZiYTI1NTE4N2M2ODYiXSwiaWF0IjoxNjUxNDA3OTk2fQ.cp6MvJSOTVmdJOOtbLb_wy81PuO29WXJ2MGDNEZ5-S4"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "5ce75819-55ba-44e4-83f1-631bd4095836",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "",
+    "name": "Recent Orders",
+    "url": "{{BASE_URL}}/recentOrders",
+    "method": "GET",
+    "sortNum": 80000,
+    "created": "2022-05-02T06:35:10.299Z",
+    "modified": "2022-06-16T11:32:05.217Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      },
+      {
+        "name": "x-otaccess",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmRlcnRva2VucyI6WyI2MmFiMGJjNTc3MTZhMTM2ZjllYTg3ZWYiLCI2MmFiMGJjNTc3MTZhMTM2ZjllYTg3ZTkiXSwiaWF0IjoxNjU1Mzc2ODM3fQ.vcrN_fpGJbrkFA4vdurlLjB4sjs19hrq_l9Y0Xpy5hg"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "ac9d74f5-c232-47df-9130-a7b10ac188c0",
+    "colId": "5ef7bc68-0701-4ddb-a916-317df8eb2c7a",
+    "containerId": "",
+    "name": "get device",
+    "url": "{{BASE_URL}}/notification_module/devices/eo9hcNMMVUfdvlEAsjnZQW:APA91bHHg8v1APTo4spO1fMrNvWXvcJObu_KoQpK3EeLEiT6DVEYbypl9newxVfhqiyiic7qcrgj783u6R3MjZALml6PLpVDenVcxSmNKrkeefLSEuNV0aV2M4p2QHlr_0-Vw74Tj07l",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-05-11T12:35:03.589Z",
+    "modified": "2023-02-18T04:50:51.152Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"user_id\": null,\n    \"device_id\": 14\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "3deab87f-d964-4f58-b27d-ac092d381dd2",
+    "colId": "5ef7bc68-0701-4ddb-a916-317df8eb2c7a",
+    "containerId": "",
+    "name": "set device",
+    "url": "{{BASE_URL}}/notification_module/devices/",
+    "method": "PUT",
+    "sortNum": 20000,
+    "created": "2022-05-11T12:35:09.443Z",
+    "modified": "2023-02-18T05:05:17.088Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"user_id\": null,\n    \"device_id\": \"eo9hcNMMVUfdvlEAsjnZQW:APA91bHHg8v1APTo4spO1fMrNvWXvcJObu_KoQpK3EeLEiT6DVEYbypl9newxVfhqiyiic7qcrgj783u6R3MjZALml6PLpVDenVcxSmNKrkeefLSEuNV0aV2M4p2QHlr_0-Vw74Tj07l\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "794d8189-f93d-4ae8-8e97-64a5b20ddd19",
+    "colId": "5ef7bc68-0701-4ddb-a916-317df8eb2c7a",
+    "containerId": "",
+    "name": "jsTest",
+    "url": "{{BASE_URL}}/notification_module/jsTest",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2022-05-13T15:05:12.302Z",
+    "modified": "2023-02-18T04:41:09.232Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "3a1edc51-8505-4c71-8aef-b5283124cd2d",
+    "colId": "5ef7bc68-0701-4ddb-a916-317df8eb2c7a",
+    "containerId": "",
+    "name": "Test Notification",
+    "url": "127.0.0.1:8000/notification_module/testNotify",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2022-05-13T15:08:43.387Z",
+    "modified": "2022-05-15T14:08:29.230Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "2293b518-5441-44c6-a43e-cb03bb805529",
+    "colId": "5ef7bc68-0701-4ddb-a916-317df8eb2c7a",
+    "containerId": "",
+    "name": "live devices get",
+    "url": "http://ecotechnpl.com/notification_module/devices/asfd",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2022-05-18T10:52:39.321Z",
+    "modified": "2023-02-18T04:43:16.055Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "c7ef0a6b-5624-46c8-8426-ee9edcdb4078",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "35f36f0e-c8c2-48d8-a15c-9fb4fa32a553",
+    "name": "get all taxes",
+    "url": "{{BASE_URL}}/businesses/coco-beach/taxes/",
+    "method": "GET",
+    "sortNum": 90000,
+    "created": "2022-06-02T17:57:19.541Z",
+    "modified": "2022-06-06T14:59:53.348Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\": \"Vada majni\",\n    \"rate\": \"3\",\n    \"enabled\": \"false\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "37922286-846d-455e-9e96-d6a4fb47f26b",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "35f36f0e-c8c2-48d8-a15c-9fb4fa32a553",
+    "name": "Create new Tax",
+    "url": "{{BASE_URL}}/businesses/coco-beach/taxes/",
+    "method": "POST",
+    "sortNum": 100000,
+    "created": "2022-06-06T15:00:12.371Z",
+    "modified": "2022-06-06T15:01:21.593Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\": \"Vada majni\",\n    \"rate\": \"3\",\n    \"enabled\": \"false\",\n    \"type\": \"compound\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "5708910f-270c-44d4-b35d-fcd1c39680b8",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "35f36f0e-c8c2-48d8-a15c-9fb4fa32a553",
+    "name": "Edit Tax",
+    "url": "{{BASE_URL}}/businesses/coco-beach/taxes/629e16c1fd8e4c1cae7ece22",
+    "method": "DELETE",
+    "sortNum": 110000,
+    "created": "2022-06-06T15:02:34.896Z",
+    "modified": "2022-06-07T15:57:55.066Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\": \"Vada majni\",\n    \"rate\": \"43\",\n    \"enabled\": \"false\", \"type\":\"normal\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "36c13093-73b5-4a48-ba87-84e568f5e6ca",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "157352df-b79a-4c12-a31b-25143667d08d",
+    "name": "summary html",
+    "url": "{{BASE_URL}}/businesses/coco-beach/order_tokens/61e18aa380c7bc09948758f7/summary-html",
+    "method": "GET",
+    "sortNum": 120000,
+    "created": "2022-06-14T06:09:41.252Z",
+    "modified": "2022-06-15T11:55:27.947Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}",
+        "isDisabled": true
+      },
+      {
+        "name": "x-otaccess",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmRlcnRva2VucyI6WyI2MWUxOGFhMzgwYzdiYzA5OTQ4NzU4ZjciXSwiaWF0IjoxNjU1MjkyNTM2fQ.nL06Q41j8cjuTzVlHHgaqV9iNKidcUAYZYPGJ_FGEvk"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "1f371fea-2842-4cd9-878f-cb236b54d102",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "55d88190-a106-4f82-a51e-1877215019a7",
+    "name": "Request Access",
+    "url": "{{BASE_URL}}/businesses/coco-beach/order_tokens/requestAccess",
+    "method": "POST",
+    "sortNum": 130000,
+    "created": "2022-06-15T11:27:20.890Z",
+    "modified": "2022-06-19T17:00:12.341Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"accessCode\": \"905273\",\n    \"orderTokenId\": \"62aef47fa6622a144a2092ec\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "f7031aef-6dc7-43ca-b991-214ce524cc7c",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "bca65f13-5e87-4cb5-8d19-9f543231cf36",
+    "name": "Register",
+    "url": "{{BASE_URL}}/auth/register",
+    "method": "POST",
+    "sortNum": 140000,
+    "created": "2022-06-17T05:52:57.108Z",
+    "modified": "2022-06-17T06:13:39.147Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": " {\n    \"email\": \"gasajot526@qqhow.com\",\n    \"phone\": \"9866008814\",\n    \"password\": \"asdfasdf1\",\n    \"name\": \"Arjun Adhikari\"\n  }",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.data.tokens.access.token",
+        "action": "setto",
+        "value": "{{AUTH_TOKEN}}"
+      }
+    ]
+  },
+  {
+    "_id": "960f80fd-332a-4ad0-b1e5-1f2bdbf8cc8b",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "bca65f13-5e87-4cb5-8d19-9f543231cf36",
+    "name": "Send verification email",
+    "url": "{{BASE_URL}}/auth/send-verification-email",
+    "method": "POST",
+    "sortNum": 150000,
+    "created": "2022-06-17T05:57:44.306Z",
+    "modified": "2022-06-17T05:59:10.409Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "11eaf586-66c5-4d34-ad3d-3f33392925de",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "97b18a23-9fd1-4405-b700-dce2859445db",
+    "name": "Pdf",
+    "url": "{{BASE_URL}}/businesses/coco-beach/spots/html",
+    "method": "POST",
+    "sortNum": 160000,
+    "created": "2022-06-30T14:21:04.937Z",
+    "modified": "2022-06-30T14:23:43.776Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"spots\": [\"61e071202c382796c4fe8429\", \"61e1888400754d06faf71256\"]\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "7a4946e5-468c-4e40-af08-697bf011390b",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "63274b85-2e79-4ecd-9e4d-b8a881ed4ec2",
+    "name": "all",
+    "url": "{{BASE_URL}}/admin/businesses",
+    "method": "GET",
+    "sortNum": 170000,
+    "created": "2022-07-04T02:01:10.611Z",
+    "modified": "2022-12-17T07:32:40.715Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "667a9dce-e66f-43b7-9f3e-4210203ee7ad",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "14a64fc1-12a9-4732-a7ed-9f2f4577a6bf",
+    "name": "Verification",
+    "url": "{{BASE_URL}}/auth/otp/send-verification-email",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-07-06T14:53:48.365Z",
+    "modified": "2022-08-12T16:23:01.047Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"email\": \"asdf@asdf.com\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "1bdf8329-d7e2-469c-8027-06481f014b25",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "14a64fc1-12a9-4732-a7ed-9f2f4577a6bf",
+    "name": "Submit",
+    "url": "{{BASE_URL}}/auth/otp/submit",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-07-06T15:17:14.704Z",
+    "modified": "2022-08-12T16:27:39.419Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"code\": \"19836\",\n    \"receiverAddress\": \"asdf@asdf.com\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "bdb5c429-b49b-4bf2-bd1d-dcecba21b456",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "8bb42a41-77dd-4795-8c29-8b912c67b5f5",
+    "name": "Register",
+    "url": "{{BASE_URL}}/auth/register",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-07-06T15:54:12.388Z",
+    "modified": "2022-08-12T16:26:06.652Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"otp\": \"62f67e60a019b4ecb511ad34\",\n    \"password\": \"asdfasdf1\",\n\"name\": \"Test User\",\n\"phone\": \"8998989898\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "564e6ff6-5914-4d92-96c1-ecf52354290a",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "14a64fc1-12a9-4732-a7ed-9f2f4577a6bf",
+    "name": "Recovery",
+    "url": "{{BASE_URL}}/auth/otp/send-recovery-email",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2022-07-09T09:24:22.044Z",
+    "modified": "2022-08-12T16:26:33.423Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"email\": \"asdf@asdf.com\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "113b8d10-1386-45c6-b9f8-877fb82da4c5",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "14a64fc1-12a9-4732-a7ed-9f2f4577a6bf",
+    "name": "Reset Password",
+    "url": "{{BASE_URL}}/auth/otp/reset-password",
+    "method": "POST",
+    "sortNum": 50000,
+    "created": "2022-07-09T09:37:30.630Z",
+    "modified": "2022-08-12T16:27:50.039Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"otpId\": \"62f67f66a019b4ecb511ad51\",\n    \"password\": \"asdfasdf1\"\n    \n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "c2533093-b8f4-4812-8a5c-40952cbc6e65",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "8bb42a41-77dd-4795-8c29-8b912c67b5f5",
+    "name": "Login",
+    "url": "{{BASE_URL}}/auth/login",
+    "method": "POST",
+    "sortNum": 60000,
+    "created": "2022-07-09T09:41:42.423Z",
+    "modified": "2022-08-13T08:50:10.059Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"email\": \"arjunq21@gmail.com\",\n    \"password\": \"asdfasdf1\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.data.tokens.access.token",
+        "action": "setto",
+        "value": "{{AUTH_TOKEN}}"
+      }
+    ]
+  },
+  {
+    "_id": "ff462379-62e2-49be-bc75-f12d4a74a076",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "8bb42a41-77dd-4795-8c29-8b912c67b5f5",
+    "name": "Me",
+    "url": "{{BASE_URL}}/users/me",
+    "method": "GET",
+    "sortNum": 70000,
+    "created": "2022-07-09T09:56:34.060Z",
+    "modified": "2022-07-13T08:09:32.337Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MmNkOTg3ZTY5ODllOTMxODc2ZDZiYWIiLCJpYXQiOjE2NTc2OTQ1MjAsImV4cCI6MTY1NzY5NjMyMCwidHlwZSI6ImFjY2VzcyJ9.tDwUFpc_XyswwSM7bafT04-xh0432IR2o1JrHm_WBoU"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "8d87b2bd-221f-4a2a-8b1b-a72974d497e8",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "e8da47ad-9dd5-4f6e-87e8-8f8656831e20",
+    "name": "Get all",
+    "url": "{{BASE_URL}}/businesses/coco-beach/spot_groups",
+    "method": "GET",
+    "sortNum": 180000,
+    "created": "2022-07-31T16:35:15.132Z",
+    "modified": "2022-07-31T16:40:32.641Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "4abff6e2-7fe0-4fbb-aaa1-d6c1aab05341",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "e8da47ad-9dd5-4f6e-87e8-8f8656831e20",
+    "name": "Add",
+    "url": "{{BASE_URL}}/businesses/coco-beach/spot_groups",
+    "method": "POST",
+    "sortNum": 190000,
+    "created": "2022-07-31T16:41:03.831Z",
+    "modified": "2022-07-31T16:41:44.238Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\": \"Balcony\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "c016e600-1b2d-408a-a912-b9d19b8f7645",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "e8da47ad-9dd5-4f6e-87e8-8f8656831e20",
+    "name": "Get single",
+    "url": "{{BASE_URL}}/businesses/coco-beach/spot_groups/62e6b0d67306b129fd03bb0c",
+    "method": "GET",
+    "sortNum": 200000,
+    "created": "2022-07-31T16:42:39.210Z",
+    "modified": "2022-07-31T16:47:06.379Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "7f4b3015-15db-4a9a-b112-20a2ae93d4f5",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "e8da47ad-9dd5-4f6e-87e8-8f8656831e20",
+    "name": "Edit single",
+    "url": "{{BASE_URL}}/businesses/coco-beach/spot_groups/62e6b0d67306b129fd03bb0c",
+    "method": "PUT",
+    "sortNum": 210000,
+    "created": "2022-07-31T16:47:19.607Z",
+    "modified": "2022-07-31T16:48:05.616Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\": \"asdf\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "81164901-3e6b-40ae-9549-c697aecf0d84",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "e8da47ad-9dd5-4f6e-87e8-8f8656831e20",
+    "name": "Delete",
+    "url": "{{BASE_URL}}/businesses/coco-beach/spot_groups/62e6b9b1a4bd2c3026df6e3e",
+    "method": "DELETE",
+    "sortNum": 220000,
+    "created": "2022-07-31T16:48:24.858Z",
+    "modified": "2022-07-31T17:40:18.413Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "f5ae67d5-3d9b-473d-99da-7bfb645ef4b3",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "97b18a23-9fd1-4405-b700-dce2859445db",
+    "name": "get all",
+    "url": "{{BASE_URL}}/businesses/coco-beach/spots/",
+    "method": "GET",
+    "sortNum": 230000,
+    "created": "2022-07-31T16:54:18.725Z",
+    "modified": "2022-07-31T17:20:49.079Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "91a8ca16-8d04-44bd-8850-54b0276eafc1",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "97b18a23-9fd1-4405-b700-dce2859445db",
+    "name": "include archived",
+    "url": "{{BASE_URL}}/businesses/coco-beach/spots/includeArchived",
+    "method": "GET",
+    "sortNum": 240000,
+    "created": "2022-07-31T17:11:49.351Z",
+    "modified": "2022-07-31T17:12:28.423Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "976f9167-7ddf-41b6-95a3-ddda95fdc426",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "97b18a23-9fd1-4405-b700-dce2859445db",
+    "name": "orderable",
+    "url": "{{BASE_URL}}/businesses/coco-beach/spots",
+    "method": "GET",
+    "sortNum": 235000,
+    "created": "2022-07-31T17:13:07.697Z",
+    "modified": "2022-07-31T17:13:07.697Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "ae0ae34f-5343-4152-affa-27c38968b551",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "97b18a23-9fd1-4405-b700-dce2859445db",
+    "name": "Create New",
+    "url": "{{BASE_URL}}/businesses/coco-beach/spots/",
+    "method": "POST",
+    "sortNum": 232500,
+    "created": "2022-07-31T17:17:46.661Z",
+    "modified": "2022-07-31T17:19:54.992Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\": \"Test Table\",\n    \"type\": \"room\",\n    \"initialCharge\": 0,\n    \"group\": \"62e6b9b1a4bd2c3026df6e3e\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "46040fae-1a4e-479f-bb1f-92b4ea140c88",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "97b18a23-9fd1-4405-b700-dce2859445db",
+    "name": "Get single",
+    "url": "{{BASE_URL}}/businesses/coco-beach/spots/62e6b989a4bd2c3026df6e33",
+    "method": "GET",
+    "sortNum": 231250,
+    "created": "2022-07-31T17:26:02.836Z",
+    "modified": "2022-07-31T17:40:37.988Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "551785bc-865f-4dfd-9f92-498b78f1e45e",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "97b18a23-9fd1-4405-b700-dce2859445db",
+    "name": "Edit ",
+    "url": "{{BASE_URL}}/businesses/coco-beach/spots/62e6b989a4bd2c3026df6e33",
+    "method": "PUT",
+    "sortNum": 231875,
+    "created": "2022-07-31T17:26:49.652Z",
+    "modified": "2022-07-31T17:39:43.981Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\": \"New Name for spot\",\n    \"type\": \"table\",\n    \"group\": \"62e6b9b1a4bd2c3026df6e3e\"\n  }",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "959c750e-3a32-4c2b-8833-2a07d826788d",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "7e86b48d-e795-42ad-8c1a-0f1463f5a0bf",
+    "name": "Get all",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/customers",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-08-01T10:05:35.323Z",
+    "modified": "2022-08-02T09:27:40.233Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "0b1bef18-453f-4f75-9506-2870a5fadf88",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "7e86b48d-e795-42ad-8c1a-0f1463f5a0bf",
+    "name": "Add New",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/vendors/",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-08-01T10:11:14.836Z",
+    "modified": "2022-08-04T06:28:00.147Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\": \"Arun Khatri\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "e6dfa507-0b77-44e4-a538-0d37f80bb85c",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "7e86b48d-e795-42ad-8c1a-0f1463f5a0bf",
+    "name": "Add attachment",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/customers/62e7af58be29f64fa8d8f4d9/addAttachment",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-08-01T10:11:17.805Z",
+    "modified": "2022-08-01T11:29:39.445Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [],
+      "files": [
+        {
+          "name": "file",
+          "value": "/Users/arjunq21/Desktop/Screen Shot 2022-07-29 at 01.18.26.png"
+        }
+      ]
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "769fc13f-0368-47cd-9b7a-ac72c5b36934",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "7e86b48d-e795-42ad-8c1a-0f1463f5a0bf",
+    "name": "Edit",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/vendors/62eb66f0cd9b8beb96250c1f",
+    "method": "PUT",
+    "sortNum": 40000,
+    "created": "2022-08-01T10:11:21.654Z",
+    "modified": "2022-08-04T06:29:32.078Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\": \"Hari shyam suppliers\",\n    \"taxNumber\": \"323233\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "67298957-4f46-4199-8519-7832b381a71d",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "7e86b48d-e795-42ad-8c1a-0f1463f5a0bf",
+    "name": "Enable",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/customers/62e8ede749bf6c7d92988d42/disable",
+    "method": "POST",
+    "sortNum": 50000,
+    "created": "2022-08-01T10:13:29.520Z",
+    "modified": "2022-08-07T11:48:57.648Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "c1120902-0841-4d46-9757-120627aed8ac",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "7e86b48d-e795-42ad-8c1a-0f1463f5a0bf",
+    "name": "Get single",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/vendors/62eb66f0cd9b8beb96250c1f",
+    "method": "GET",
+    "sortNum": 35000,
+    "created": "2022-08-01T11:17:17.328Z",
+    "modified": "2022-08-07T15:19:00.341Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "edc972a3-cff6-4224-96ce-db8e73a93588",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "7e86b48d-e795-42ad-8c1a-0f1463f5a0bf",
+    "name": "RemoveAttachment",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/customers/62e7af58be29f64fa8d8f4d9/deleteAttachment",
+    "method": "POST",
+    "sortNum": 37500,
+    "created": "2022-08-01T11:33:00.070Z",
+    "modified": "2022-08-01T11:37:10.560Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"attachmentURL\":\"https://woitr-test.sgp1.digitaloceanspaces.com/contact/62e7af58be29f64fa8d8f4d9-1659353345625.pdf\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "7bf7a4e1-7576-4133-bc7c-70615ae3101e",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "e9c5a777-7e82-4fdd-bad9-41d1164838c8",
+    "name": "Add new Transaction",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/sales",
+    "method": "POST",
+    "sortNum": 250000,
+    "created": "2022-08-02T08:45:53.281Z",
+    "modified": "2022-09-02T17:47:21.503Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"contact\": \"62e8edcc49bf6c7d92988d3a\",\n  \"billDate\":  \"2022-09-02T17:21:37.097Z\",\n  \"dueDate\": \"2022-09-02T17:21:37.097Z\",\n  \"billNumber\": \"a39ssdss24433423\",\n  \"orderNumber\": \"asd3\",\n  \"discount\": {\n    \"type\": \"amount\",\n    \"amount\": \"10\"\n  },\n  \"taxes\": [\n    {\n      \"type\": \"percentage\",\n      \"name\": \"VAT\",\n      \"amount\": \"13\"\n    },\n    {\n      \"type\": \"percentage\",\n      \"name\": \"Others\",\n      \"amount\": \"15\"\n    }\n    ],\n    \"items\": [\n      {\n        \"name\": \"Chicken Meat\",\n        \"quantity\": \"5.5\",\n        \"price\": 480\n      }\n      \n      ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "32eaaa6e-2b16-40fd-90bb-981128847d70",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "e9c5a777-7e82-4fdd-bad9-41d1164838c8",
+    "name": "Get all",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/sales",
+    "method": "GET",
+    "sortNum": 260000,
+    "created": "2022-08-02T10:23:44.153Z",
+    "modified": "2022-09-02T17:20:45.890Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"contact\": \"62e8edcc49bf6c7d92988d3a\",\n  \"billDate\":  \"2022-08-02T09:30:52.484Z\",\n  \"dueDate\": \"2022-08-02T09:30:52.484Z\",\n  \"paymentMode\": \"cash\",\n  \"paidAmount\": 22.8,\n  \"billNumber\": \"3223\",\n  \"orderNumber\": \"asd3\",\n  \"discount\": {\n    \"type\": \"percentage\",\n    \"amount\": \"10\"\n  },\n  \"taxes\": [\n    {\n      \"type\": \"percentage\",\n      \"name\": \"VAT\",\n      \"amount\": \"13\"\n    },\n    {\n      \"type\": \"percentage\",\n      \"name\": \"Others\",\n      \"amount\": \"15\"\n    }\n    ],\n    \"items\": [\n      {\n        \"name\": \"Hello\",\n        \"quantity\": \"5\",\n        \"price\": 4\n      }\n      \n      ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "f70bad78-627a-46e2-9c2f-3d24b335d66c",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "fb29d0c3-6ccf-4145-a6ad-53f244ae7ea4",
+    "name": "Set Settings",
+    "url": "{{BASE_URL}}/users/me/settings",
+    "method": "PUT",
+    "sortNum": 260000,
+    "created": "2022-08-03T04:36:38.526Z",
+    "modified": "2022-08-03T05:03:07.950Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"settings\": [\n    {\n      \"key\": \"focus-spots\",\n      \"type\": \"business\",\n      \"value\": [ \"619b9818ca13aa04e119171d\"],\n      \"businessId\": \"619325b59450621969aea811\"\n    }\n    ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "5bea9f0c-c88a-4c3d-bb60-e6745f63ade0",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "157352df-b79a-4c12-a31b-25143667d08d",
+    "name": "Get Feedback",
+    "url": "{{BASE_URL}}/businesses/coco-beach/order_tokens/62aef47fa6622a144a2092ec/feedback",
+    "method": "GET",
+    "sortNum": 280000,
+    "created": "2022-08-03T08:04:18.547Z",
+    "modified": "2022-08-03T08:05:42.673Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "cb969ec4-f761-4327-b84b-3ddb166b35bf",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "157352df-b79a-4c12-a31b-25143667d08d",
+    "name": "Give Feedback",
+    "url": "{{BASE_URL}}/businesses/coco-beach/order_tokens/62aef47fa6622a144a2092ec/feedback",
+    "method": "PUT",
+    "sortNum": 290000,
+    "created": "2022-08-03T08:05:59.087Z",
+    "modified": "2022-08-03T08:07:12.880Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"message\": \"Good thing, nice experience\",\n  \"rating\": \"3\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "42542ee0-7536-44dd-9871-02f8ed84d031",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "e9c5a777-7e82-4fdd-bad9-41d1164838c8",
+    "name": "Get Single",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/sales/6309f0a4d31384f00e579902",
+    "method": "GET",
+    "sortNum": 255000,
+    "created": "2022-08-03T12:00:36.854Z",
+    "modified": "2022-09-02T17:14:11.424Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"contact\": \"62e8edcc49bf6c7d92988d3a\",\n  \"billDate\":  \"2022-08-02T09:30:52.484Z\",\n  \"dueDate\": \"2022-08-02T09:30:52.484Z\",\n  \"paymentMode\": \"cash\",\n  \"paidAmount\": 22.8,\n  \"billNumber\": \"3223\",\n  \"orderNumber\": \"asd3\",\n  \"discount\": {\n    \"type\": \"percentage\",\n    \"amount\": \"10\"\n  },\n  \"taxes\": [\n    {\n      \"type\": \"percentage\",\n      \"name\": \"VAT\",\n      \"amount\": \"13\"\n    },\n    {\n      \"type\": \"percentage\",\n      \"name\": \"Others\",\n      \"amount\": \"15\"\n    }\n    ],\n    \"items\": [\n      {\n        \"name\": \"Hello\",\n        \"quantity\": \"5\",\n        \"price\": 4\n      }\n      \n      ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "8b71bc24-a533-4bb1-965c-63ff4a40be09",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "e9c5a777-7e82-4fdd-bad9-41d1164838c8",
+    "name": "Edit Single",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/purchases/62ef92fd7e4ad9755542094f",
+    "method": "PUT",
+    "sortNum": 257500,
+    "created": "2022-08-03T12:28:20.782Z",
+    "modified": "2022-08-07T14:58:07.872Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"contact\": \"62eb66f0cd9b8beb96250c1f\",\n  \"billDate\":  \"2022-08-02T09:30:52.484Z\",\n  \"dueDate\": \"2022-08-02T09:30:52.484Z\",\n  \"billNumber\": \"32243\",\n  \"orderNumber\": \"asd3\",\n  \"discount\": {\n    \"type\": \"percentage\",\n    \"amount\": \"10\"\n  },\n  \"taxes\": [\n    {\n      \"type\": \"percentage\",\n      \"name\": \"VAT\",\n      \"amount\": \"13\"\n    },\n    {\n      \"type\": \"amount\",\n      \"name\": \"Others\",\n      \"amount\": \"15\"\n    }\n    ],\n    \"items\": [\n      {\n        \"name\": \"Hello\",\n        \"quantity\": \"5\",\n        \"price\": 40\n      },{\n        \"name\": \"Sugar\",\n        \"quantity\": \"5\",\n        \"price\": 8\n      }\n      \n      ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "f48aa5af-e9fd-42fe-a7f1-d09bb21adbbf",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "e9c5a777-7e82-4fdd-bad9-41d1164838c8",
+    "name": "Enable",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/purchases/62ef92fd7e4ad9755542094f/disable",
+    "method": "POST",
+    "sortNum": 258750,
+    "created": "2022-08-03T12:36:01.688Z",
+    "modified": "2022-08-07T10:31:53.427Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"contact\": \"62e8edcc49bf6c7d92988d3a\",\n  \"billDate\":  \"2022-08-02T09:30:52.484Z\",\n  \"dueDate\": \"2022-08-02T09:30:52.484Z\",\n  \"paymentMode\": \"cash\",\n  \"paidAmount\": 20,\n  \"billNumber\": \"3223\",\n  \"orderNumber\": \"asd3\",\n  \"discount\": {\n    \"type\": \"percentage\",\n    \"amount\": \"10\"\n  },\n  \"taxes\": [\n    {\n      \"type\": \"percentage\",\n      \"name\": \"VAT\",\n      \"amount\": \"13\"\n    },\n    {\n      \"type\": \"amount\",\n      \"name\": \"Others\",\n      \"amount\": \"15\"\n    }\n    ],\n    \"items\": [\n      {\n        \"name\": \"Hello\",\n        \"quantity\": \"5\",\n        \"price\": 4\n      }\n      \n      ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "00d9569d-33f1-43f3-9e09-019432f3a1e8",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "7e86b48d-e795-42ad-8c1a-0f1463f5a0bf",
+    "name": "Summary",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/vendors/62eb66f0cd9b8beb96250c1f/summary",
+    "method": "GET",
+    "sortNum": 36250,
+    "created": "2022-08-04T06:05:45.032Z",
+    "modified": "2022-08-04T07:52:35.444Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "70b9a56d-0b8c-4f4b-bf21-a10813bc4cdb",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "7e86b48d-e795-42ad-8c1a-0f1463f5a0bf",
+    "name": "Payments",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/vendors/62eb66f0cd9b8beb96250c1f/payments?page=1&limit=5",
+    "method": "GET",
+    "sortNum": 36875,
+    "created": "2022-08-04T07:52:21.903Z",
+    "modified": "2022-08-07T15:32:49.836Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "page",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "limit",
+        "value": "5",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "07d6191f-2b1d-4262-9f2c-6b5c02a13536",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "e9c5a777-7e82-4fdd-bad9-41d1164838c8",
+    "name": "Make Payment",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/purchases/62ef92fd7e4ad9755542094f/makePayment",
+    "method": "POST",
+    "sortNum": 300000,
+    "created": "2022-08-07T10:32:34.732Z",
+    "modified": "2022-08-07T14:59:21.166Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"date\": \"2022-08-07T10:33:47.957Z\",\n  \"amount\": \"-152.8\",\n  \"paymentMethod\": \"online\",\n  \"description\": \"sadf\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "242d094e-c863-491e-85db-96ca68e35032",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "e9c5a777-7e82-4fdd-bad9-41d1164838c8",
+    "name": "MarkAsPaid",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/purchases/62ef92fd7e4ad9755542094f/markAsPaid",
+    "method": "POST",
+    "sortNum": 310000,
+    "created": "2022-08-07T15:09:19.042Z",
+    "modified": "2022-08-07T15:09:36.712Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "88cc50f5-c847-4c0f-89cb-5ac7f2840706",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "7e86b48d-e795-42ad-8c1a-0f1463f5a0bf",
+    "name": "Transactions",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/vendors/62eb66f0cd9b8beb96250c1f/transactions?page=1&limit=2",
+    "method": "GET",
+    "sortNum": 37187.5,
+    "created": "2022-08-07T15:25:15.638Z",
+    "modified": "2022-08-07T15:25:15.638Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "page",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "limit",
+        "value": "2",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "ddb5eb20-dfad-4409-a711-372075e430c5",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "abb48f86-2fe8-4c7c-950d-a5b04f72a3d7",
+    "name": "Get single",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/payments/62ef9fddf88bb07a14945e79",
+    "method": "GET",
+    "sortNum": 320000,
+    "created": "2022-08-07T17:01:05.790Z",
+    "modified": "2022-08-07T18:21:20.738Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"date\": \"2022-08-07T10:33:47.957Z\",\n    \"amount\": \"1.2\",\n    \"method\": \"cash\",\n    \"type\": \"outgoing\",\n    \"note\": \"asdf nice pay\",\n    \"contact\": \"62eb66f0cd9b8beb96250c1f\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "b10c9999-26a5-4976-bc3e-9bbf10c09b88",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "abb48f86-2fe8-4c7c-950d-a5b04f72a3d7",
+    "name": "View All",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/payments?limit=20",
+    "method": "GET",
+    "sortNum": 330000,
+    "created": "2022-08-07T17:01:25.125Z",
+    "modified": "2022-08-07T18:19:43.679Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "limit",
+        "value": "20",
+        "isPath": false
+      },
+      {
+        "name": "from",
+        "value": "2022-08-07T10:33:47.957Z",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "to",
+        "value": "2022-08-07T10:33:47.957Z",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "method",
+        "value": "cash",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "type",
+        "value": "outgoing",
+        "isDisabled": true,
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "17159908-0963-45d0-a516-813ed8d3cb5a",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "abb48f86-2fe8-4c7c-950d-a5b04f72a3d7",
+    "name": "Add new",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/payments",
+    "method": "POST",
+    "sortNum": 325000,
+    "created": "2022-08-07T17:59:37.205Z",
+    "modified": "2022-09-02T18:14:03.716Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"date\": \"2022-08-07T10:33:47.957Z\",\n    \"amount\": \"1.2\",\n    \"method\": \"cash\",\n    \"type\": \"outgoing\",\n    \"note\": \"asdf nice pay\",\n    \"contact\": \"62eb66f0cd9b8beb96250c1f\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "4acbdfe8-d3a3-4c30-9fff-c28349d68a4e",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "abb48f86-2fe8-4c7c-950d-a5b04f72a3d7",
+    "name": "Edit",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/payments/62ef9fddf88bb07a14945e79",
+    "method": "PUT",
+    "sortNum": 322500,
+    "created": "2022-08-07T18:05:24.965Z",
+    "modified": "2022-08-07T18:24:20.615Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"date\": \"2022-08-07T10:33:47.957Z\",\n    \"amount\": \"1\",\n    \"method\": \"cash\",\n    \"note\": \"asdf nice pay\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "1c5cb8ce-231d-4095-8154-f4bcd47523fa",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "c72f8e90-ab8e-4d59-8efb-b6897b1d624b",
+    "name": "Report",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/purchases/daily/report/?date=2022-09-03",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-08-08T06:05:25.134Z",
+    "modified": "2022-09-03T17:07:46.018Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "date",
+        "value": "2022-09-03",
+        "isPath": false
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"contact\": \"62e8edcc49bf6c7d92988d3a\",\n  \"billDate\":  \"2022-08-02T09:30:52.484Z\",\n  \"dueDate\": \"2022-08-02T09:30:52.484Z\",\n  \"paymentMode\": \"cash\",\n  \"paidAmount\": 22.8,\n  \"billNumber\": \"3223\",\n  \"orderNumber\": \"asd3\",\n  \"discount\": {\n    \"type\": \"percentage\",\n    \"amount\": \"10\"\n  },\n  \"taxes\": [\n    {\n      \"type\": \"percentage\",\n      \"name\": \"VAT\",\n      \"amount\": \"13\"\n    },\n    {\n      \"type\": \"percentage\",\n      \"name\": \"Others\",\n      \"amount\": \"15\"\n    }\n    ],\n    \"items\": [\n      {\n        \"name\": \"Hello\",\n        \"quantity\": \"5\",\n        \"price\": 4\n      }\n      \n      ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "5cebff38-b59b-4d12-9f8a-986bae1d6c71",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "0842d19d-31ea-4138-9a04-494742c39943",
+    "name": "Get",
+    "url": "{{BASE_URL}}/devices",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-08-12T15:45:49.575Z",
+    "modified": "2022-08-12T16:01:52.870Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Tops Main Bell\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "9ac8177d-3e37-4f32-9783-50a391128a75",
+    "colId": "7422fab3-3ef5-48f4-8cfa-62c38ad6740f",
+    "containerId": "db4a038d-9476-44ef-a028-784e809a4990",
+    "name": "Register",
+    "url": "{{BASE_URL}}/auth/register",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-08-12T15:50:08.793Z",
+    "modified": "2022-08-12T15:50:08.793Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"otp\": \"62c953e53a36b54bc7918865\",\n    \"password\": \"asasdf1df\",\n\"name\": \"Hency Boi\",\n\"phone\": \"asdf\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "5b8d2af1-66fb-4396-bcfc-3d3927967178",
+    "colId": "7422fab3-3ef5-48f4-8cfa-62c38ad6740f",
+    "containerId": "db4a038d-9476-44ef-a028-784e809a4990",
+    "name": "Login",
+    "url": "{{BASE_URL}}/auth/login",
+    "method": "POST",
+    "sortNum": 60000,
+    "created": "2022-08-12T15:50:08.794Z",
+    "modified": "2022-08-12T15:50:08.793Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"email\": \"firstoneforhost@gmail.com\",\n    \"password\": \"asdfasdf1\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.tokens.access.token",
+        "action": "setto",
+        "value": "{{AUTH_TOKEN}}"
+      }
+    ]
+  },
+  {
+    "_id": "c55697b6-9c85-4baa-af81-8d29845e7e2b",
+    "colId": "7422fab3-3ef5-48f4-8cfa-62c38ad6740f",
+    "containerId": "db4a038d-9476-44ef-a028-784e809a4990",
+    "name": "Me",
+    "url": "{{BASE_URL}}/users/me",
+    "method": "GET",
+    "sortNum": 70000,
+    "created": "2022-08-12T15:50:08.795Z",
+    "modified": "2022-08-12T15:50:08.793Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MmNkOTg3ZTY5ODllOTMxODc2ZDZiYWIiLCJpYXQiOjE2NTc2OTQ1MjAsImV4cCI6MTY1NzY5NjMyMCwidHlwZSI6ImFjY2VzcyJ9.tDwUFpc_XyswwSM7bafT04-xh0432IR2o1JrHm_WBoU"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "77f2f8d2-05eb-4454-bfb9-fe9f98cda0a0",
+    "colId": "7422fab3-3ef5-48f4-8cfa-62c38ad6740f",
+    "containerId": "4559c51d-bcd1-4c0e-bd11-bf8e44e717f8",
+    "name": "Verification",
+    "url": "{{BASE_URL}}/auth/otp/send-verification-email",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-08-12T15:50:08.796Z",
+    "modified": "2022-08-12T15:50:08.793Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"email\": \"firstoneforhost@gmail.com\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "2c0da1ac-5ba9-49a5-b586-92fd09fe0f16",
+    "colId": "7422fab3-3ef5-48f4-8cfa-62c38ad6740f",
+    "containerId": "4559c51d-bcd1-4c0e-bd11-bf8e44e717f8",
+    "name": "Submit",
+    "url": "{{BASE_URL}}/auth/otp/submit",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-08-12T15:50:08.797Z",
+    "modified": "2022-08-12T15:50:08.793Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"code\": \"17625\",\n    \"receiverAddress\": \"xopajo9259@weepm.com\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "3fdec198-3642-48df-a250-dd83b18f8079",
+    "colId": "7422fab3-3ef5-48f4-8cfa-62c38ad6740f",
+    "containerId": "4559c51d-bcd1-4c0e-bd11-bf8e44e717f8",
+    "name": "Recovery",
+    "url": "{{BASE_URL}}/auth/otp/send-recovery-email",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2022-08-12T15:50:08.798Z",
+    "modified": "2022-08-12T15:50:08.793Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"email\": \"xopajo9259@weepm.com\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "337c6f5a-bbd3-4727-bf5e-783e6c03b5f9",
+    "colId": "7422fab3-3ef5-48f4-8cfa-62c38ad6740f",
+    "containerId": "4559c51d-bcd1-4c0e-bd11-bf8e44e717f8",
+    "name": "Reset Password",
+    "url": "{{BASE_URL}}/auth/otp/reset-password",
+    "method": "POST",
+    "sortNum": 50000,
+    "created": "2022-08-12T15:50:08.799Z",
+    "modified": "2022-08-12T15:50:08.793Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"otpId\": \"62c954883a36b54bc791887b\",\n    \"password\": \"asdfghjkl1\"\n    \n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "83a1a1cd-5dcb-4bf3-9aec-71cf0eff0331",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "0842d19d-31ea-4138-9a04-494742c39943",
+    "name": "Add",
+    "url": "{{BASE_URL}}/devices",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-08-12T16:00:46.350Z",
+    "modified": "2022-08-17T15:29:34.502Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"GCES Bell\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "52cd15a3-4715-47e4-a07f-b5ef07ea33dc",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "41fe2d91-c233-4a34-94b7-bad5f0b5c58f",
+    "name": "Get",
+    "url": "{{BASE_URL}}/devices/63b170a6bc172b598ecc0955",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-08-12T16:08:00.660Z",
+    "modified": "2023-01-02T09:01:55.250Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.data.device._id",
+        "action": "setto",
+        "value": "{{DEVICE_ID}}"
+      }
+    ]
+  },
+  {
+    "_id": "318f003f-6b22-4f11-974e-b3e52c28faa9",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "41fe2d91-c233-4a34-94b7-bad5f0b5c58f",
+    "name": "Edit",
+    "url": "{{BASE_URL}}/devices/{{DEVICE_ID}}",
+    "method": "PUT",
+    "sortNum": 30000,
+    "created": "2022-08-12T16:17:07.979Z",
+    "modified": "2022-08-18T06:49:40.855Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Hariprasad School\",\n  \"status\": \"true\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "c5540d22-8852-4bb8-92e1-a4de8eac7941",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "41fe2d91-c233-4a34-94b7-bad5f0b5c58f",
+    "name": "Add Users",
+    "url": "{{BASE_URL}}/devices/{{DEVICE_ID}}/addUser",
+    "method": "PUT",
+    "sortNum": 40000,
+    "created": "2022-08-12T16:20:56.781Z",
+    "modified": "2022-08-17T15:39:55.641Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"asdf@asdf.com\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "705d6fcc-7702-40b0-aa79-a8b3d3b74851",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "41fe2d91-c233-4a34-94b7-bad5f0b5c58f",
+    "name": "Remove User",
+    "url": "{{BASE_URL}}/devices/62fd09bcce0c7e00042b7daf/removeUser",
+    "method": "PUT",
+    "sortNum": 50000,
+    "created": "2022-08-12T16:30:33.625Z",
+    "modified": "2022-08-17T15:31:53.082Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"asdf@asdf.com\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "2744837c-1cc6-447e-975a-d75dbd28252c",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "d09f8320-016f-4897-bcd4-9677fb3f6003",
+    "name": "Get all",
+    "url": "{{BASE_URL}}/devices/{{DEVICE_ID}}/timetables",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2022-08-13T05:42:05.726Z",
+    "modified": "2022-08-17T15:36:47.221Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "4950f0b1-d578-4f52-80ae-2a1be2d90ff9",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "d09f8320-016f-4897-bcd4-9677fb3f6003",
+    "name": "Add new",
+    "url": "{{BASE_URL}}/devices/{{DEVICE_ID}}/timetables",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2022-08-13T05:49:25.625Z",
+    "modified": "2022-08-18T06:50:10.900Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Regular Schedule\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "13d5eafa-5732-45cc-b837-d1c9a09ce11a",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "44331102-3f39-4948-b9cf-03ebd61d1fe9",
+    "name": "Get ",
+    "url": "{{BASE_URL}}/devices/{{DEVICE_ID}}/timetables/62fde1229bd6f400049437ac",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-08-13T05:59:05.223Z",
+    "modified": "2022-08-18T06:50:27.964Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.data.timeTable._id",
+        "action": "setto",
+        "value": "{{TIMETABLE_ID}}"
+      }
+    ]
+  },
+  {
+    "_id": "c108faf4-5c76-44ac-a087-8c9fafcd28f2",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "44331102-3f39-4948-b9cf-03ebd61d1fe9",
+    "name": "Edit",
+    "url": "{{BASE_URL}}/devices/{{DEVICE_ID}}/timetables/{{TIMETABLE_ID}}",
+    "method": "PUT",
+    "sortNum": 20000,
+    "created": "2022-08-13T06:04:26.652Z",
+    "modified": "2022-08-17T15:42:17.252Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Normal Days\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "59e5fd7a-4d94-47e9-ba00-9e4005db0f2c",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "44331102-3f39-4948-b9cf-03ebd61d1fe9",
+    "name": "Delete",
+    "url": "{{BASE_URL}}/devices/{{DEVICE_ID}}/timetables/{{TIMETABLE_ID}}",
+    "method": "DELETE",
+    "sortNum": 30000,
+    "created": "2022-08-13T06:42:28.142Z",
+    "modified": "2022-08-17T15:42:25.035Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Normal Days\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "39e63c0b-5ad1-45b1-9966-30ba3a100dc4",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "64bdf5bc-db87-4f8e-a20b-63c1773d2599",
+    "name": "Get All",
+    "url": "{{BASE_URL}}/devices/{{DEVICE_ID}}/timetables/{{TIMETABLE_ID}}/playbacks",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-08-13T06:43:11.208Z",
+    "modified": "2022-08-17T15:43:54.130Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "3ed5153a-9d4e-4628-b872-b0e1bb66eb74",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "64bdf5bc-db87-4f8e-a20b-63c1773d2599",
+    "name": "Add New",
+    "url": "{{BASE_URL}}/devices/{{DEVICE_ID}}/timetables/{{TIMETABLE_ID}}/playbacks",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-08-13T07:42:26.826Z",
+    "modified": "2022-08-18T06:56:11.228Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"offDays\": [6],\n  \"period\": \"15\",\n  \"time\": {\n    \"hour\": \"4\",\n    \"minute\": \"0\",\n    \"meridian\": \"PM\"\n  }\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "6a67f8f6-8b31-41ca-955e-712550fdb117",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "bc63fe09-a4bc-4c71-9c11-d05a0eb81990",
+    "name": "Get ",
+    "url": "{{BASE_URL}}/devices/{{DEVICE_ID}}/timetables/{{TIMETABLE_ID}}/playbacks/62fde19f9bd6f400049437d6",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-08-13T08:11:31.736Z",
+    "modified": "2022-08-18T06:57:02.204Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.data.playback._id",
+        "action": "setto",
+        "value": "{{PLAYBACK_ID}}"
+      }
+    ]
+  },
+  {
+    "_id": "1f6d9ad0-ff32-4498-8bd6-da6fef5dbd75",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "bc63fe09-a4bc-4c71-9c11-d05a0eb81990",
+    "name": "Edit",
+    "url": "{{BASE_URL}}/devices/{{DEVICE_ID}}/timetables/{{TIMETABLE_ID}}/playbacks/{{PLAYBACK_ID}}",
+    "method": "PUT",
+    "sortNum": 20000,
+    "created": "2022-08-13T08:16:19.867Z",
+    "modified": "2022-08-17T15:50:31.333Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"offDays\": [6],\n  \"period\": \"17\",\n  \"time\": {\n   \"hour\": \"9\",\n   \"minute\": \"45\",\n   \"meridian\": \"AM\"\n  }\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "4183c458-b457-4314-b5ff-206bea954060",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "bc63fe09-a4bc-4c71-9c11-d05a0eb81990",
+    "name": "Delete",
+    "url": "{{BASE_URL}}/devices/{{DEVICE_ID}}/timetables/{{TIMETABLE_ID}}/playbacks/{{PLAYBACK_ID}}",
+    "method": "DELETE",
+    "sortNum": 30000,
+    "created": "2022-08-13T08:22:37.725Z",
+    "modified": "2022-08-17T15:45:00.260Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "de232330-fa00-4951-a086-36708d89e656",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "41fe2d91-c233-4a34-94b7-bad5f0b5c58f",
+    "name": "Set Settings",
+    "url": "{{BASE_URL}}/devices/{{DEVICE_ID}}/settings",
+    "method": "GET",
+    "sortNum": 60000,
+    "created": "2022-08-13T08:58:17.745Z",
+    "modified": "2022-08-23T08:20:46.845Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"singleRingDuration\": 700,\n    \"shortGapDuration\": \"200\",\n    \"longGapDuration\": 600,\n    \"ringPattern\": \"tringtring\",\n    \"bellType\": \"bell\"\n  }",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "b141fb12-7e7a-4352-81ff-7124cba07295",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "",
+    "name": "Load Device",
+    "url": "{{BASE_URL}}/load-device/{{DEVICE_ID}}",
+    "method": "GET",
+    "sortNum": 70000,
+    "created": "2022-08-13T09:15:32.997Z",
+    "modified": "2022-08-18T06:32:53.237Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "71c89399-f3fb-4ee0-994e-a7d84236cbd7",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "44331102-3f39-4948-b9cf-03ebd61d1fe9",
+    "name": "Set Active",
+    "url": "{{BASE_URL}}/devices/{{DEVICE_ID}}/timetables/{{TIMETABLE_ID}}/setAsActive",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2022-08-13T09:36:32.743Z",
+    "modified": "2022-08-17T15:43:20.227Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Normal Days\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "b65400c2-38c8-48d1-a6b0-034610b2fef1",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "41fe2d91-c233-4a34-94b7-bad5f0b5c58f",
+    "name": "Get Settings",
+    "url": "{{BASE_URL}}/devices/{{DEVICE_ID}}/settings",
+    "method": "PUT",
+    "sortNum": 70000,
+    "created": "2022-08-23T08:20:34.909Z",
+    "modified": "2022-08-23T08:20:34.909Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"singleRingDuration\": 700,\n    \"shortGapDuration\": \"200\",\n    \"longGapDuration\": 600,\n    \"ringPattern\": \"tringtring\",\n    \"bellType\": \"bell\"\n  }",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "b6ccfa05-524d-4782-acd7-3d2e371f0f97",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "fea1ebde-a9e7-4526-bb1d-19163c9267f8",
+    "name": "Get All",
+    "url": "{{BASE_URL}}/businesses/coco-beach/printers",
+    "method": "GET",
+    "sortNum": 340000,
+    "created": "2022-08-23T16:34:17.903Z",
+    "modified": "2022-08-23T16:35:57.569Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "b48058be-3f95-4e49-a3ec-1b87484a572d",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "fea1ebde-a9e7-4526-bb1d-19163c9267f8",
+    "name": "Add new",
+    "url": "{{BASE_URL}}/businesses/coco-beach/printers",
+    "method": "POST",
+    "sortNum": 350000,
+    "created": "2022-08-23T16:39:33.442Z",
+    "modified": "2022-08-23T16:48:51.201Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"dddddd\",\n  \"ipAddress\": \"192.18.1.4\",\n  \"port\": \"1\",\n  \"purposes\": [\"kot\"]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "fb12bb4e-de41-4f02-8035-b635f403eeb8",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "93294380-588f-46d5-b6b8-b4c5edae483d",
+    "name": "Single Get",
+    "url": "{{BASE_URL}}/businesses/coco-beach/printers/6305050c8e904909545851b6",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-08-23T16:55:09.687Z",
+    "modified": "2022-08-23T16:55:23.781Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "8366e580-04e9-411c-8b31-1668df40f3cc",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "93294380-588f-46d5-b6b8-b4c5edae483d",
+    "name": "Edit",
+    "url": "{{BASE_URL}}/businesses/coco-beach/printers/6305050c8e904909545851b6",
+    "method": "PUT",
+    "sortNum": 20000,
+    "created": "2022-08-23T16:57:34.034Z",
+    "modified": "2022-08-23T17:00:38.115Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"New Name\",\n  \"ipAddress\": \"43.3.4.3\",\n  \"purposes\": [\"bills\", \"kot\"],\n  \"port\": \"9100\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "57cf9342-8bc6-4cb2-af9f-eac081c68705",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "93294380-588f-46d5-b6b8-b4c5edae483d",
+    "name": "Edit Copy",
+    "url": "{{BASE_URL}}/businesses/coco-beach/printers/6305050c8e904909545851b6",
+    "method": "DELETE",
+    "sortNum": 30000,
+    "created": "2022-08-23T17:02:15.876Z",
+    "modified": "2022-08-23T17:02:22.511Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"New Name\",\n  \"ipAddress\": \"43.3.4.3\",\n  \"purposes\": [\"bills\", \"kot\"],\n  \"port\": \"9100\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "5edcaf1c-f5a8-4478-8ce4-c4c008bd85a6",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "e94cba94-c93c-4d82-931c-64209b1cd484",
+    "name": "Menu",
+    "url": "{{BASE_URL}}/businesses/coco-beach/menu",
+    "method": "GET",
+    "sortNum": 360000,
+    "created": "2022-08-28T07:22:06.642Z",
+    "modified": "2022-08-28T07:25:49.883Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "61185f38-f4a2-4c67-97a6-fd2daa3522e7",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "abb48f86-2fe8-4c7c-950d-a5b04f72a3d7",
+    "name": "Todays Report",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/payments/todaysReport",
+    "method": "GET",
+    "sortNum": 321250,
+    "created": "2022-09-03T12:13:41.661Z",
+    "modified": "2022-09-03T12:15:18.623Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"date\": \"2022-08-07T10:33:47.957Z\",\n    \"amount\": \"1.2\",\n    \"method\": \"cash\",\n    \"type\": \"outgoing\",\n    \"note\": \"asdf nice pay\",\n    \"contact\": \"62eb66f0cd9b8beb96250c1f\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "9b31a22e-0e6f-4837-903a-84e1d335b5dc",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "cb34c444-8434-4c46-9110-86c9b2afaa84",
+    "name": "Top Orders",
+    "url": "{{BASE_URL}}/businesses/deurali-restaurant/accounting/topOrders?date=this-month&limit=4&page=2",
+    "method": "GET",
+    "sortNum": 370000,
+    "created": "2022-09-03T13:03:24.647Z",
+    "modified": "2022-12-17T10:44:02.347Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "date",
+        "value": "this-month",
+        "isPath": false
+      },
+      {
+        "name": "limit",
+        "value": "4",
+        "isPath": false
+      },
+      {
+        "name": "page",
+        "value": "2",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "0428c11c-5f72-4b88-989e-a73919955a78",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "cb34c444-8434-4c46-9110-86c9b2afaa84",
+    "name": "Recent Transactions",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/transactions/recent",
+    "method": "GET",
+    "sortNum": 380000,
+    "created": "2022-09-03T14:19:01.206Z",
+    "modified": "2022-09-03T14:19:28.724Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "460f23b1-d05b-43f2-8ced-e39dc7ff01b5",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "c72f8e90-ab8e-4d59-8efb-b6897b1d624b",
+    "name": "Transactions",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/sales/daily/transactions/?date=2022-09-03",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-09-03T17:13:36.868Z",
+    "modified": "2022-09-03T17:28:01.688Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "date",
+        "value": "2022-09-03",
+        "isPath": false
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"contact\": \"62e8edcc49bf6c7d92988d3a\",\n  \"billDate\":  \"2022-08-02T09:30:52.484Z\",\n  \"dueDate\": \"2022-08-02T09:30:52.484Z\",\n  \"paymentMode\": \"cash\",\n  \"paidAmount\": 22.8,\n  \"billNumber\": \"3223\",\n  \"orderNumber\": \"asd3\",\n  \"discount\": {\n    \"type\": \"percentage\",\n    \"amount\": \"10\"\n  },\n  \"taxes\": [\n    {\n      \"type\": \"percentage\",\n      \"name\": \"VAT\",\n      \"amount\": \"13\"\n    },\n    {\n      \"type\": \"percentage\",\n      \"name\": \"Others\",\n      \"amount\": \"15\"\n    }\n    ],\n    \"items\": [\n      {\n        \"name\": \"Hello\",\n        \"quantity\": \"5\",\n        \"price\": 4\n      }\n      \n      ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "bd62c9d3-7785-454b-a996-a67efcb8cb21",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "c72f8e90-ab8e-4d59-8efb-b6897b1d624b",
+    "name": "Payments",
+    "url": "{{BASE_URL}}/businesses/coco-beach/accounting/sales/daily/payments/?date=2022-09-03",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2022-09-03T17:21:06.188Z",
+    "modified": "2022-09-03T17:27:38.898Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "date",
+        "value": "2022-09-03",
+        "isPath": false
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"contact\": \"62e8edcc49bf6c7d92988d3a\",\n  \"billDate\":  \"2022-08-02T09:30:52.484Z\",\n  \"dueDate\": \"2022-08-02T09:30:52.484Z\",\n  \"paymentMode\": \"cash\",\n  \"paidAmount\": 22.8,\n  \"billNumber\": \"3223\",\n  \"orderNumber\": \"asd3\",\n  \"discount\": {\n    \"type\": \"percentage\",\n    \"amount\": \"10\"\n  },\n  \"taxes\": [\n    {\n      \"type\": \"percentage\",\n      \"name\": \"VAT\",\n      \"amount\": \"13\"\n    },\n    {\n      \"type\": \"percentage\",\n      \"name\": \"Others\",\n      \"amount\": \"15\"\n    }\n    ],\n    \"items\": [\n      {\n        \"name\": \"Hello\",\n        \"quantity\": \"5\",\n        \"price\": 4\n      }\n      \n      ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "eda3b5ca-3e50-4288-8807-1db5efcd6546",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "e94cba94-c93c-4d82-931c-64209b1cd484",
+    "name": "Connection Requests",
+    "url": "{{BASE_URL}}/businesses/coco-beach/connection_requests",
+    "method": "GET",
+    "sortNum": 370000,
+    "created": "2022-09-03T17:48:13.103Z",
+    "modified": "2022-09-03T17:48:31.286Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "6234a34e-454a-40bb-82e0-6152f58549b7",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "9b7bc28e-3617-409f-ab9f-7a038f47e8ee",
+    "name": "login",
+    "url": "{{BASE_URL}}/auth/login",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-09-23T10:09:34.396Z",
+    "modified": "2022-09-23T10:23:02.816Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"email\": \"arjunq21@gmail.com\",\n    \"password\": \"asdfasdf1\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.tokens.access.token",
+        "action": "setto",
+        "value": "{{AUTH_TOKEN}}"
+      }
+    ]
+  },
+  {
+    "_id": "b1e1a86d-38f5-48c5-865d-e1a9e3115d33",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "9b7bc28e-3617-409f-ab9f-7a038f47e8ee",
+    "name": "Register",
+    "url": "{{BASE_URL}}/auth/register",
+    "method": "POST",
+    "sortNum": 140000,
+    "created": "2022-09-23T10:09:34.397Z",
+    "modified": "2022-11-09T16:13:39.840Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": " {\n    \"email\": \"arjunq21@gmail.com\",\n    \"password\": \"asdfasdf1\",\n    \"name\": \"Arjun Adhikari\",\n    \"role\": \"artist\"\n  }",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.tokens.access.token",
+        "action": "setto",
+        "value": "{{AUTH_TOKEN}}"
+      }
+    ]
+  },
+  {
+    "_id": "584e9015-1e7a-4d6e-b445-a939379f7146",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "9b7bc28e-3617-409f-ab9f-7a038f47e8ee",
+    "name": "Send verification email",
+    "url": "{{BASE_URL}}/auth/send-verification-email",
+    "method": "POST",
+    "sortNum": 150000,
+    "created": "2022-09-23T10:09:34.398Z",
+    "modified": "2022-09-23T10:09:34.396Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "f331d842-5737-4f5c-b801-5ac9c7cbd06a",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "9b7bc28e-3617-409f-ab9f-7a038f47e8ee",
+    "name": "me",
+    "url": "{{BASE_URL}}/users/me",
+    "method": "GET",
+    "sortNum": 160000,
+    "created": "2022-09-23T10:09:34.399Z",
+    "modified": "2022-09-24T15:41:49.720Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "f3e4ed61-8617-4854-8012-ed12bdf65623",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "",
+    "name": "status check",
+    "url": "{{BASE_URL}}",
+    "method": "GET",
+    "sortNum": 270000,
+    "created": "2022-09-23T10:15:05.281Z",
+    "modified": "2022-09-23T10:15:17.040Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "83b5be9b-f8a7-46d5-8447-7e893fdfa3a4",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "6a6fa0b5-4a8a-40ae-9b54-8cf30df7b715",
+    "name": "get all",
+    "url": "{{BASE_URL}}/musics",
+    "method": "GET",
+    "sortNum": 280000,
+    "created": "2022-09-24T15:26:36.175Z",
+    "modified": "2022-11-10T10:50:48.816Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "12282d4b-59b3-4271-a076-695d10589974",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "6a6fa0b5-4a8a-40ae-9b54-8cf30df7b715",
+    "name": "Add ",
+    "url": "{{BASE_URL}}/music",
+    "method": "POST",
+    "sortNum": 290000,
+    "created": "2022-09-24T15:40:13.437Z",
+    "modified": "2022-11-10T03:02:31.338Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "title",
+          "value": "Jhalak Dikh laja"
+        },
+        {
+          "name": "type",
+          "value": "song"
+        }
+      ],
+      "files": [
+        {
+          "name": "music",
+          "value": "/Users/arjunq21/Documents/Flutter/Projects/woitr/assets/sounds/notification.mp3"
+        }
+      ]
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "a6354795-b31e-4749-b002-bd1c2f55e345",
+    "colId": "3638e3bc-1a5a-4d3f-aa5f-d449bd5d44b8",
+    "containerId": "41fe2d91-c233-4a34-94b7-bad5f0b5c58f",
+    "name": "Live Ring",
+    "url": "{{BASE_URL}}/devices/{{DEVICE_ID}}/liveRing",
+    "method": "POST",
+    "sortNum": 80000,
+    "created": "2022-10-16T05:39:57.401Z",
+    "modified": "2022-10-16T05:56:02.577Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"period\": 3\n  }",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "6687622b-e62a-4e7d-b76a-097a7952c074",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "e94cba94-c93c-4d82-931c-64209b1cd484",
+    "name": "Latest Updates",
+    "url": "{{BASE_URL}}/businesses/coco-beach/latestUpdates",
+    "method": "GET",
+    "sortNum": 390000,
+    "created": "2022-11-04T12:55:09.124Z",
+    "modified": "2022-11-04T12:55:26.628Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "166179f9-b3f0-4be8-9c51-0f83b3290438",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "bf1bfe35-d3a8-451b-b4b1-9be6fb0ff9a8",
+    "name": "get all",
+    "url": "{{BASE_URL}}/votings",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-11-08T03:45:55.438Z",
+    "modified": "2022-11-08T03:46:06.021Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "a93a9c5a-f0f7-49a0-a09d-1ac8322e1244",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "bf1bfe35-d3a8-451b-b4b1-9be6fb0ff9a8",
+    "name": "Add New",
+    "url": "{{BASE_URL}}/votings",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-11-08T03:49:35.930Z",
+    "modified": "2022-11-08T10:49:03.411Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"President of china\",\n  \"description\": \"Hey there\",\n  \"from\": 122,\n  \"to\": 23233232\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "79b6fe7a-e79e-4130-a305-9266646c2ccd",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "13fafc1d-2e8b-4d58-9de4-beabf122e3b4",
+    "name": "login",
+    "url": "{{BASE_URL}}/auth/login",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-11-08T04:11:49.818Z",
+    "modified": "2022-11-09T03:29:19.751Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"email\": \"arjunadhikari789@gmail.com\",\n    \"password\": \"asdfasdf1\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.data.tokens.access.token",
+        "action": "setto",
+        "value": "{{AUTH_TOKEN}}"
+      }
+    ]
+  },
+  {
+    "_id": "12e98169-db94-421f-a24d-85bc5bf66dbc",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "13fafc1d-2e8b-4d58-9de4-beabf122e3b4",
+    "name": "Register",
+    "url": "{{BASE_URL}}/auth/register",
+    "method": "POST",
+    "sortNum": 140000,
+    "created": "2022-11-08T04:11:49.819Z",
+    "modified": "2023-02-26T02:45:35.327Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": " {\n    \"email\": \"arjunsssssqss21@gmail.com\",\n    \"password\": \"asdfasdf1\",\n    \"name\": \"Arjun Adhikari\",\n    \"phone\": \"9866008814\"\n  }",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.tokens.access.token",
+        "action": "setto",
+        "value": "{{AUTH_TOKEN}}"
+      }
+    ]
+  },
+  {
+    "_id": "7e6ef9b4-feee-4725-83b2-aca8e91131f4",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "13fafc1d-2e8b-4d58-9de4-beabf122e3b4",
+    "name": "Send verification email",
+    "url": "{{BASE_URL}}/auth/send-verification-email",
+    "method": "POST",
+    "sortNum": 150000,
+    "created": "2022-11-08T04:11:49.820Z",
+    "modified": "2022-11-08T04:11:49.818Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "a92c8ded-6ef3-423e-bd26-04803287dc42",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "13fafc1d-2e8b-4d58-9de4-beabf122e3b4",
+    "name": "me",
+    "url": "{{BASE_URL}}/users/me",
+    "method": "GET",
+    "sortNum": 160000,
+    "created": "2022-11-08T04:11:49.821Z",
+    "modified": "2022-11-08T04:11:49.818Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "8961db62-6136-44a3-8a2b-284eef80f588",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "f5735b50-d960-4616-8dfe-1c18dc7f2929",
+    "name": "get all",
+    "url": "{{BASE_URL}}/votings/{{VOTING_ID}}/candidates",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-11-08T05:13:19.851Z",
+    "modified": "2022-11-08T06:30:51.649Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "e7949ea2-2773-4eb4-ae8b-4f647f233db0",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "1ad7c584-072b-4559-9690-683a7763b87b",
+    "name": "edit",
+    "url": "{{BASE_URL}}/votings/{{VOTING_ID}}",
+    "method": "PUT",
+    "sortNum": 20000,
+    "created": "2022-11-08T05:15:44.315Z",
+    "modified": "2022-11-08T05:20:49.531Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"President of china\",\n  \"description\": \"Hey there\",\n  \"from\": 2,\n  \"to\": 23233232,\n  \"status\": \"hidden\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "bd17151e-7ffe-47e9-9dc6-4303bf945c3c",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "1ad7c584-072b-4559-9690-683a7763b87b",
+    "name": "delete",
+    "url": "{{BASE_URL}}/votings/{{VOTING_ID}}",
+    "method": "DELETE",
+    "sortNum": 30000,
+    "created": "2022-11-08T05:21:47.516Z",
+    "modified": "2022-11-08T05:21:59.090Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"President of china\",\n  \"description\": \"Hey there\",\n  \"from\": 2,\n  \"to\": 23233232,\n  \"status\": \"hidden\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "8047b8f8-d8e0-45d9-841a-10529edc86d7",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "1ad7c584-072b-4559-9690-683a7763b87b",
+    "name": "get ",
+    "url": "{{BASE_URL}}/votings/6369d41432caa833a24a2211",
+    "method": "GET",
+    "sortNum": 15000,
+    "created": "2022-11-08T06:16:56.564Z",
+    "modified": "2022-11-08T06:18:48.323Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.data._id",
+        "action": "setto",
+        "value": "{{VOTING_ID}}"
+      }
+    ]
+  },
+  {
+    "_id": "c0cca2ee-a8db-4635-b742-c2c05c81a92b",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "f5735b50-d960-4616-8dfe-1c18dc7f2929",
+    "name": "add new",
+    "url": "{{BASE_URL}}/votings/{{VOTING_ID}}/candidates",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-11-08T06:20:28.804Z",
+    "modified": "2022-11-08T10:39:09.316Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Shyam Karki from india\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "d6bc5d65-00e1-4769-8236-fd5343f4bcf1",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "f05de73e-71c1-4ff6-96ae-db4b2d9b4e6b",
+    "name": "get details",
+    "url": "{{BASE_URL}}/votings/{{VOTING_ID}}/candidates/636a7624767f7063a396b84b",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-11-08T06:25:43.005Z",
+    "modified": "2022-11-09T05:23:31.896Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.data._id",
+        "action": "setto",
+        "value": "{{CANDIDATE_ID}}"
+      }
+    ]
+  },
+  {
+    "_id": "ba475cd0-0f4d-4fb8-bf08-3f27bf69080a",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "f05de73e-71c1-4ff6-96ae-db4b2d9b4e6b",
+    "name": "edit",
+    "url": "{{BASE_URL}}/votings/{{VOTING_ID}}/candidates/{{CANDIDATE_ID}}",
+    "method": "PUT",
+    "sortNum": 20000,
+    "created": "2022-11-08T06:29:03.756Z",
+    "modified": "2022-11-08T06:32:55.161Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Hari Prasad\",\n  \"description\": \"I am very nice\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "3facd2d0-7c0f-44f8-a107-acadd301ce17",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "f05de73e-71c1-4ff6-96ae-db4b2d9b4e6b",
+    "name": "delete",
+    "url": "{{BASE_URL}}/votings/{{VOTING_ID}}/candidates/{{CANDIDATE_ID}}",
+    "method": "DELETE",
+    "sortNum": 30000,
+    "created": "2022-11-08T06:30:25.138Z",
+    "modified": "2022-11-08T06:32:12.487Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Hari\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "12a2bb43-f4e5-4bf0-a3cc-f45373dbaaed",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "f05de73e-71c1-4ff6-96ae-db4b2d9b4e6b",
+    "name": "Set Image",
+    "url": "{{BASE_URL}}/votings/{{VOTING_ID}}/candidates/{{CANDIDATE_ID}}/setImage",
+    "method": "POST",
+    "sortNum": 25000,
+    "created": "2022-11-08T06:48:45.199Z",
+    "modified": "2022-11-08T06:50:19.180Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [],
+      "files": [
+        {
+          "name": "image",
+          "value": "/Users/arjunq21/Desktop/Screen Shot 2022-11-01 at 20.28.59.png"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "0de347c1-e4b0-4edd-826a-72c72094786e",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "f05de73e-71c1-4ff6-96ae-db4b2d9b4e6b",
+    "name": "Vote",
+    "url": "{{BASE_URL}}/votings/{{VOTING_ID}}/candidates/{{CANDIDATE_ID}}/vote",
+    "method": "POST",
+    "sortNum": 27500,
+    "created": "2022-11-08T06:55:15.636Z",
+    "modified": "2022-11-08T07:46:46.831Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"otpId\": \"636a0922d46024aa3b13d5f2\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "21b09fa5-e76e-4f3c-8b8e-7528f6ccdbbf",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "13fafc1d-2e8b-4d58-9de4-beabf122e3b4",
+    "name": "voting_otp_send",
+    "url": "{{BASE_URL}}/auth/otp/send-voting-email",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-11-08T07:44:21.693Z",
+    "modified": "2022-11-08T07:45:42.886Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"arjunq21@gmail.com\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "41f55836-3818-4368-884a-14d853ce0900",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "13fafc1d-2e8b-4d58-9de4-beabf122e3b4",
+    "name": "Involved Votings",
+    "url": "{{BASE_URL}}/users/me/votings",
+    "method": "GET",
+    "sortNum": 90000,
+    "created": "2022-11-09T03:28:30.103Z",
+    "modified": "2022-11-09T03:28:45.487Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "a790d875-0a29-478f-bc3f-e637c79b48e9",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "13fafc1d-2e8b-4d58-9de4-beabf122e3b4",
+    "name": "Voted Candidates",
+    "url": "{{BASE_URL}}/users/me/votedCandidates",
+    "method": "GET",
+    "sortNum": 55000,
+    "created": "2022-11-09T04:33:21.150Z",
+    "modified": "2022-11-09T04:33:44.762Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "cf8921b7-3a5d-40b1-9ea6-eb9a88b895ee",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "19842542-e3ef-4f1f-b390-ce8967d6a5bf",
+    "name": "Get Single",
+    "url": "{{BASE_URL}}/music/636c57a1ed4df8c128f799df",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-11-10T01:59:13.788Z",
+    "modified": "2022-11-10T02:00:12.795Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "title",
+          "value": "shyam"
+        },
+        {
+          "name": "type",
+          "value": "song"
+        }
+      ],
+      "files": [
+        {
+          "name": "music",
+          "value": "/Users/arjunq21/Documents/Flutter/Projects/woitr/assets/sounds/notification.mp3"
+        }
+      ]
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "cf5825c7-a4a7-44da-9a31-a44c24116558",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "19842542-e3ef-4f1f-b390-ce8967d6a5bf",
+    "name": "Single",
+    "url": "{{BASE_URL}}/music/636c5d48f4e058c63a664b78",
+    "method": "DELETE",
+    "sortNum": 20000,
+    "created": "2022-11-10T02:03:46.008Z",
+    "modified": "2022-11-10T02:10:22.935Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "title",
+          "value": "shyam"
+        },
+        {
+          "name": "type",
+          "value": "song"
+        }
+      ],
+      "files": [
+        {
+          "name": "music",
+          "value": "/Users/arjunq21/Documents/Flutter/Projects/woitr/assets/sounds/notification.mp3"
+        }
+      ]
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "c453ded2-28ea-4ff6-8ff7-59f1ecbc1a76",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "11e04a73-1d2e-447e-a76a-b87c5e9f9b13",
+    "name": "Get all",
+    "url": "{{BASE_URL}}/playlists",
+    "method": "GET",
+    "sortNum": 300000,
+    "created": "2022-11-10T02:22:17.084Z",
+    "modified": "2022-11-10T02:22:25.853Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "404a9ea0-b524-4f97-be28-c3bf604a957e",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "11e04a73-1d2e-447e-a76a-b87c5e9f9b13",
+    "name": "Add New",
+    "url": "{{BASE_URL}}/playlists",
+    "method": "POST",
+    "sortNum": 310000,
+    "created": "2022-11-10T02:22:29.515Z",
+    "modified": "2022-11-10T02:37:51.829Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Best Songs of All Time\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "bbf30209-a5ee-4411-b0a1-b8abd0e931d3",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "61839c17-7637-4ef3-80e0-43371e386c7e",
+    "name": "Get all",
+    "url": "{{BASE_URL}}/playlists/636c63ffba4776c9f95bdc61/music",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-11-10T02:38:04.910Z",
+    "modified": "2022-11-10T02:57:40.304Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "864ee295-2c39-4f84-aaf2-64d3385c3617",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "929a9c32-22af-464e-b014-b8b27f8d44bb",
+    "name": "Delete",
+    "url": "{{BASE_URL}}/playlists/636c60896bf4cdc8cafbdfa4",
+    "method": "DELETE",
+    "sortNum": 20000,
+    "created": "2022-11-10T02:40:05.093Z",
+    "modified": "2022-11-10T02:41:56.012Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "fc050f83-a4f8-4ff1-8e28-25d038f3a422",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "929a9c32-22af-464e-b014-b8b27f8d44bb",
+    "name": "Get Single Copy",
+    "url": "{{BASE_URL}}/playlists/636c60896bf4cdc8cafbdfa4",
+    "method": "GET",
+    "sortNum": 15000,
+    "created": "2022-11-10T02:49:57.466Z",
+    "modified": "2022-11-10T02:49:57.466Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "45ddfecd-f2d1-488e-a3b0-82a092e61341",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "61839c17-7637-4ef3-80e0-43371e386c7e",
+    "name": "Add New",
+    "url": "{{BASE_URL}}/playlists/636c63ffba4776c9f95bdc61/music",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-11-10T02:52:53.399Z",
+    "modified": "2022-11-10T03:02:40.088Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"musicId\": \"636c69c7aa026fcf8aab6800\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "3c9b77a7-a935-4182-8d9d-98794edd6e2b",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "61839c17-7637-4ef3-80e0-43371e386c7e",
+    "name": "Delte Song",
+    "url": "{{BASE_URL}}/playlists/636c63ffba4776c9f95bdc61/music",
+    "method": "DELETE",
+    "sortNum": 15000,
+    "created": "2022-11-10T03:04:53.404Z",
+    "modified": "2022-11-10T03:05:54.949Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"musicId\": \"636c69c7aa026fcf8aab6800\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "35a7afe1-47c6-4a77-ad3a-78ee48c26eb2",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "9b7bc28e-3617-409f-ab9f-7a038f47e8ee",
+    "name": "my music",
+    "url": "{{BASE_URL}}/users/me/music",
+    "method": "GET",
+    "sortNum": 170000,
+    "created": "2022-11-10T07:20:25.843Z",
+    "modified": "2022-11-10T08:28:43.063Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "c732bab5-3ea3-404a-99b2-222382ce2484",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "9b7bc28e-3617-409f-ab9f-7a038f47e8ee",
+    "name": "my playlists",
+    "url": "{{BASE_URL}}/users/me/playlists",
+    "method": "GET",
+    "sortNum": 180000,
+    "created": "2022-11-10T07:21:44.256Z",
+    "modified": "2022-11-10T07:21:53.276Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "2310790b-d142-4d73-8f3e-bcf934d8bc9a",
+    "colId": "37c6e6b5-7b5e-49b1-9e44-414f31064c4c",
+    "containerId": "19842542-e3ef-4f1f-b390-ce8967d6a5bf",
+    "name": "Add to Fav",
+    "url": "{{BASE_URL}}/musics/636c5944b15dcac1bdf02e82/favorite",
+    "method": "POST",
+    "sortNum": 15000,
+    "created": "2022-11-10T12:58:24.004Z",
+    "modified": "2022-11-10T12:59:04.361Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "title",
+          "value": "shyam"
+        },
+        {
+          "name": "type",
+          "value": "song"
+        }
+      ],
+      "files": [
+        {
+          "name": "music",
+          "value": "/Users/arjunq21/Documents/Flutter/Projects/woitr/assets/sounds/notification.mp3"
+        }
+      ]
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "1014e6f8-773b-4639-88be-cd7beb317f67",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "63274b85-2e79-4ecd-9e4d-b8a881ed4ec2",
+    "name": "Add New",
+    "url": "{{BASE_URL}}/admin/businesses",
+    "method": "POST",
+    "sortNum": 180000,
+    "created": "2022-12-17T07:48:20.205Z",
+    "modified": "2022-12-17T08:02:44.099Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Business1\",\n  \"type\": \"restaurant\",\n  \"contactNumber\": \"8998988923\",\n  \"address\": \"Lamachaur\",\n  \"usesVAT\": true,\n  \"email\": \"asdf@asssdf.asdf\",\n  \"features\": [\n    \"digital-menu\", \"inhouse-ordering\"\n  ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "b682a060-15a5-427e-ae6b-7356c203ad45",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "63274b85-2e79-4ecd-9e4d-b8a881ed4ec2",
+    "name": "Edit",
+    "url": "{{BASE_URL}}/admin/businesses/639d7797450286760e51b273",
+    "method": "PUT",
+    "sortNum": 190000,
+    "created": "2022-12-17T08:04:10.578Z",
+    "modified": "2022-12-17T08:05:31.119Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"slug\": \"uc3tdjiyh\",\n  \"name\": \"Business1\",\n  \"type\": \"restaurant\",\n  \"contactNumber\": \"8998988923\",\n  \"address\": \"Lamachaur\",\n  \"usesVAT\": true,\n  \"email\": \"asdf@asssdf.asdf\",\n  \"features\": [\n  ]\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "2f4d7dd3-f362-41c7-a8ef-70a1791af0cf",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "7f2c87df-ace5-460c-8fae-c3c3a80da643",
+    "name": "Get All",
+    "url": "{{BASE_URL}}/businesses/deurali-restaurant/categories",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-12-17T10:20:06.965Z",
+    "modified": "2022-12-17T10:20:55.427Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "47a18fb3-caff-4501-9ab9-ec98b43ca5e5",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "fb29d0c3-6ccf-4145-a6ad-53f244ae7ea4",
+    "name": "Redirects",
+    "url": "{{BASE_URL}}/users/redirects",
+    "method": "GET",
+    "sortNum": 135000,
+    "created": "2022-12-20T14:08:37.130Z",
+    "modified": "2022-12-20T14:09:01.595Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "54b7a769-74b9-4932-9e2c-3747fe86e46c",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "46bcb4e0-153b-49a3-8813-815cf7298ce7",
+    "name": "login",
+    "url": "{{BASE_URL}}/auth/login",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-12-31T06:52:10.177Z",
+    "modified": "2023-01-09T14:36:58.126Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"email\": \"arjunq21@gmail.com\",\n    \"password\": \"asdfasdf1\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.data.tokens.access.token",
+        "action": "setto",
+        "value": "{{AUTH_TOKEN}}"
+      }
+    ]
+  },
+  {
+    "_id": "369eb2d3-853c-48f0-a784-f9ec57ebae84",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "46bcb4e0-153b-49a3-8813-815cf7298ce7",
+    "name": "Register",
+    "url": "{{BASE_URL}}/auth/register",
+    "method": "POST",
+    "sortNum": 140000,
+    "created": "2022-12-31T06:52:10.178Z",
+    "modified": "2023-01-09T14:35:03.873Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": " {\n    \"email\": \"arjunq21@gmail.com\",\n    \"phone\": \"9866008814\",\n    \"password\": \"asdfasdf1\",\n    \"name\": \"Arjun Adhikari\"\n  }",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.data.tokens.access.token",
+        "action": "setto",
+        "value": "{{AUTH_TOKEN}}"
+      }
+    ]
+  },
+  {
+    "_id": "7dd0d1a2-55d8-4551-9b2a-22c157878c40",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "46bcb4e0-153b-49a3-8813-815cf7298ce7",
+    "name": "Send verification email",
+    "url": "{{BASE_URL}}/auth/send-verification-email",
+    "method": "POST",
+    "sortNum": 150000,
+    "created": "2022-12-31T06:52:10.179Z",
+    "modified": "2022-12-31T06:52:10.177Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "30f432cc-f55e-4185-b6a5-647872c55856",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "55c30f9b-0d85-4756-9e90-7013db29190a",
+    "name": "me",
+    "url": "{{BASE_URL}}/users/me",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-12-31T06:52:10.180Z",
+    "modified": "2022-12-31T06:52:10.177Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{AUTH_TOKEN}}"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "2990b45c-120b-4104-a5bc-385c8ae388f4",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "f77982ce-5e7d-4fbe-92d1-862077b47e92",
+    "name": "Get all",
+    "url": "{{BASE_URL}}/businesses/deurali-restaurant/roles",
+    "method": "GET",
+    "sortNum": 400000,
+    "created": "2023-01-08T16:19:59.723Z",
+    "modified": "2023-01-08T16:20:28.113Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "e99a772d-b0b6-41e6-aa3a-7ee838d53f9f",
+    "colId": "790a98aa-2fa1-40da-b3d1-939c3b195ca3",
+    "containerId": "f77982ce-5e7d-4fbe-92d1-862077b47e92",
+    "name": "Add New",
+    "url": "{{BASE_URL}}/businesses/deurali-restaurant/roles",
+    "method": "POST",
+    "sortNum": 410000,
+    "created": "2023-01-08T16:40:35.379Z",
+    "modified": "2023-01-08T16:41:21.752Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Admin\",\n  \"permissions\": [\"add:name\"]\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "b0ee387e-d26b-4be9-ba17-4de84adf2eff",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "00d7e96f-b154-407f-a550-81e837f8bff7",
+    "name": "Get All",
+    "url": "{{BASE_URL}}/admin/brands",
+    "method": "GET",
+    "sortNum": 160000,
+    "created": "2023-01-09T15:05:00.578Z",
+    "modified": "2023-01-09T15:31:44.784Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Arjun Adhikari\",\n  \"description\": \"Good man\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "db1b51a0-83b3-4174-80ed-ee8fd0ad483f",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "1ecf5d8b-1877-4866-a667-a294d00167ed",
+    "name": "Single",
+    "url": "{{BASE_URL}}/admin/brands/63bc3104d568045aa5fce4bd",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-01-09T15:24:41.910Z",
+    "modified": "2023-01-09T15:43:37.492Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Arjun Adhikari\",\n  \"description\": \"Good man\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "03e476bf-7c58-4ad6-b0c4-02ce7b1abd2f",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "00d7e96f-b154-407f-a550-81e837f8bff7",
+    "name": "Add New",
+    "url": "{{BASE_URL}}/admin/brands",
+    "method": "POST",
+    "sortNum": 165000,
+    "created": "2023-01-09T15:25:46.156Z",
+    "modified": "2023-01-23T17:20:12.297Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "Arjun"
+        }
+      ],
+      "files": [
+        {
+          "name": "image",
+          "value": "/Users/arjunq21/Desktop/flutter_logo.jpeg"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "5de4c53d-f7e9-4042-8dd8-5674c52b40b4",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "1ecf5d8b-1877-4866-a667-a294d00167ed",
+    "name": "Edit",
+    "url": "{{BASE_URL}}/admin/brands/63bc3104d568045aa5fce4bd",
+    "method": "PUT",
+    "sortNum": 20000,
+    "created": "2023-01-09T15:35:58.054Z",
+    "modified": "2023-01-23T17:30:44.207Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "Eveready"
+        },
+        {
+          "name": "description",
+          "value": "Hello"
+        }
+      ],
+      "files": [
+        {
+          "name": "image",
+          "value": "/Users/arjunq21/Desktop/232788717_129195582659993_2419439735062858566_n.jpeg",
+          "isDisabled": true
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "e85e143f-6058-47fb-bc27-ca355726be6c",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "1ecf5d8b-1877-4866-a667-a294d00167ed",
+    "name": "Hide",
+    "url": "{{BASE_URL}}/admin/brands/63bc3104d568045aa5fce4bd",
+    "method": "DELETE",
+    "sortNum": 30000,
+    "created": "2023-01-09T15:36:51.520Z",
+    "modified": "2023-01-09T15:43:43.341Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Everready\",\n  \"description\": \"\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "5b2d2a84-d16b-4f2f-9373-f0a7faacdf23",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "a816c711-adb9-4b99-90ea-905c0633c868",
+    "name": "Get All",
+    "url": "{{BASE_URL}}/admin/brands/63bc30fb768d2e5a96eb3eae/tools",
+    "method": "GET",
+    "sortNum": 170000,
+    "created": "2023-01-09T15:44:02.147Z",
+    "modified": "2023-01-09T15:44:35.999Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "26492f80-c067-4b74-ac2b-6ce570807e1d",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "a816c711-adb9-4b99-90ea-905c0633c868",
+    "name": "Add new",
+    "url": "{{BASE_URL}}/admin/brands/63bc30fb768d2e5a96eb3eae/tools",
+    "method": "POST",
+    "sortNum": 180000,
+    "created": "2023-01-09T15:49:04.022Z",
+    "modified": "2023-01-23T17:59:39.988Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "Battery"
+        }
+      ],
+      "files": [
+        {
+          "name": "image",
+          "value": "/Users/arjunq21/Desktop/231216265_128247419421476_4155649962721564004_n.jpeg"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "6ec3f7d4-97de-4992-b83c-5ae67879fa81",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "6c97d277-181b-4643-8e15-bc6384e34c84",
+    "name": "Single Tool",
+    "url": "{{BASE_URL}}/admin/brands/63bc30fb768d2e5a96eb3eae/tools/63bc3795ca2c396100aa5308",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2023-01-09T15:50:09.859Z",
+    "modified": "2023-01-09T16:00:13.695Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Arjun Adhikari\",\n  \"description\": \"Good man\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "6e8ac82b-22d6-4c2a-8178-cfff0353864a",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "6c97d277-181b-4643-8e15-bc6384e34c84",
+    "name": "Edit Tool",
+    "url": "{{BASE_URL}}/admin/brands/63bc30fb768d2e5a96eb3eae/tools/63bc3795ca2c396100aa5308",
+    "method": "PUT",
+    "sortNum": 15000,
+    "created": "2023-01-09T15:50:12.906Z",
+    "modified": "2023-01-23T17:59:16.774Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "Hello"
+        },
+        {
+          "name": "description",
+          "value": "o hi"
+        }
+      ],
+      "files": [
+        {
+          "name": "image",
+          "value": "/Users/arjunq21/Desktop/249616172_10159624667779146_1554957230267554304_n.jpg"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "14d0f58d-bddc-47dc-90cb-784a958b8c73",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "6c97d277-181b-4643-8e15-bc6384e34c84",
+    "name": "Hide Tool",
+    "url": "{{BASE_URL}}/admin/brands/63bc30fb768d2e5a96eb3eae/tools/63bc3795ca2c396100aa5308",
+    "method": "DELETE",
+    "sortNum": 10000,
+    "created": "2023-01-09T15:50:16.106Z",
+    "modified": "2023-01-09T16:01:15.783Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Everready\",\n  \"description\": \"\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "3a1d01ef-072e-492b-a33e-0b106501ab3d",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "a7d78721-47e7-4a20-8a7b-fad8294c9e9e",
+    "name": "All Tools",
+    "url": "{{BASE_URL}}/admin/tools",
+    "method": "GET",
+    "sortNum": 190000,
+    "created": "2023-01-11T11:15:59.017Z",
+    "modified": "2023-01-11T11:16:07.835Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "70acee7d-b24d-48bf-b36c-3601e6e5eb84",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "371a6f0f-0cb4-48b2-a813-f3207e021584",
+    "name": "Hide Model",
+    "url": "{{BASE_URL}}/admin/brands/63bc30fb768d2e5a96eb3eae/tools/63bc3795ca2c396100aa5308/models/63cecef5d6fac2a8543fb8b3",
+    "method": "DELETE",
+    "sortNum": 10000,
+    "created": "2023-01-23T15:16:55.156Z",
+    "modified": "2023-01-23T18:24:04.173Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Everready\",\n  \"description\": \"\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "90f2c007-6dda-4493-a198-aa8e8da066ff",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "371a6f0f-0cb4-48b2-a813-f3207e021584",
+    "name": "Edit Model",
+    "url": "{{BASE_URL}}/admin/brands/63bc30fb768d2e5a96eb3eae/tools/63bc3795ca2c396100aa5308/models/63cecef5d6fac2a8543fb8b3",
+    "method": "PUT",
+    "sortNum": 20000,
+    "created": "2023-01-23T15:16:57.622Z",
+    "modified": "2023-01-23T18:23:19.039Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "arjun"
+        },
+        {
+          "name": "width",
+          "value": "3223"
+        },
+        {
+          "name": "height",
+          "value": "322"
+        }
+      ],
+      "files": [
+        {
+          "name": "profileImage",
+          "value": "/Users/arjunq21/Desktop/Active Orders.png"
+        },
+        {
+          "name": "backgroundImage",
+          "value": "/Users/arjunq21/Desktop/232788717_129195582659993_2419439735062858566_n.jpeg"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "33f4ba3f-e38e-4796-8b7b-b966ed72d686",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "371a6f0f-0cb4-48b2-a813-f3207e021584",
+    "name": "Single Model",
+    "url": "{{BASE_URL}}/admin/brands/63bc30fb768d2e5a96eb3eae/tools/63bc3795ca2c396100aa5308/models/63cecef5d6fac2a8543fb8b3",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2023-01-23T15:17:00.239Z",
+    "modified": "2023-01-23T18:17:20.060Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Arjun Adhikari\",\n  \"description\": \"Good man\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "92bda75f-4f8c-40af-b391-db087699f756",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "371a6f0f-0cb4-48b2-a813-f3207e021584",
+    "name": "Get All ",
+    "url": "{{BASE_URL}}/admin/brands/63bc30fb768d2e5a96eb3eae/tools/63bc3795ca2c396100aa5308/models",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2023-01-23T15:17:55.354Z",
+    "modified": "2023-01-23T15:18:26.538Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "9145647e-7f63-422e-abe9-51c9915667bf",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "371a6f0f-0cb4-48b2-a813-f3207e021584",
+    "name": "Add New",
+    "url": "{{BASE_URL}}/admin/brands/63bc30fb768d2e5a96eb3eae/tools/63bc3795ca2c396100aa5308/models",
+    "method": "POST",
+    "sortNum": 50000,
+    "created": "2023-01-23T18:01:05.024Z",
+    "modified": "2023-01-23T18:16:21.451Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "Battery"
+        },
+        {
+          "name": "width",
+          "value": "210"
+        },
+        {
+          "name": "height",
+          "value": "340"
+        }
+      ],
+      "files": [
+        {
+          "name": "backgroundImage",
+          "value": "/Users/arjunq21/Desktop/Group 20.svg"
+        },
+        {
+          "name": "profileImage",
+          "value": "/Users/arjunq21/Desktop/249616172_10159624667779146_1554957230267554304_n.jpg"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "f121081a-9354-4aa5-94c9-ae04e5c7dc1b",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "a7d78721-47e7-4a20-8a7b-fad8294c9e9e",
+    "name": "All Models",
+    "url": "{{BASE_URL}}/admin/models",
+    "method": "GET",
+    "sortNum": 200000,
+    "created": "2023-01-23T18:29:24.726Z",
+    "modified": "2023-01-23T18:30:02.930Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "78bf0c24-6d0c-4f16-84c1-cacd8c24bad0",
+    "colId": "007bac79-2963-4f35-aa87-a4a2cc610abe",
+    "containerId": "de184d4c-7aee-4877-bb46-4296474baf31",
+    "name": "Create new",
+    "url": "",
+    "method": "GET",
+    "sortNum": 210000,
+    "created": "2023-02-24T04:43:58.877Z",
+    "modified": "2023-02-24T04:43:58.878Z",
+    "headers": []
+  }
+]
