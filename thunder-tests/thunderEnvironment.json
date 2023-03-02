@@ -9,11 +9,15 @@
     "data": [
       {
         "name": "BASE_URL",
-        "value": "http://localhost:3000"
+        "value": "https://voting.padxu.com"
       },
       {
         "name": "AUTH_TOKEN",
-        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzZhNDJmM2IxMzYwYzE2ZGVkYzRkMmIiLCJpYXQiOjE2NzczNzkxNTgsImV4cCI6MTY5NTM3OTE1OCwidHlwZSI6ImFjY2VzcyJ9.zVC6kjCeaXOVKkpMh3x86WKeAk3WIvUqyOkQr2AmKZk"
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzY5Y2MyNWE5YzA5NTIyMWU0ODViMjUiLCJpYXQiOjE2Nzc2NDk0MzAsImV4cCI6MTY5NTY0OTQzMCwidHlwZSI6ImFjY2VzcyJ9.fWDQk45R8DUaAeWS7XDj8rc-QfxxWvGDZuExOeqR3g8"
+      },
+      {
+        "name": "VOTING_ID",
+        "value": "6369d41432caa833a24a2211"
       }
     ]
   }

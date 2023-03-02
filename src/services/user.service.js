@@ -4,25 +4,11 @@ const { User } = require('../models');
 const ApiError = require('../utils/ApiError');
 // const { otpMethod } = require('../utils/constants');
 
-
 const createUser = async (userBody) => {
-  // const otp = await OTP.findById(userBody.otp) ;
-  // if(!otp || !otp.isVerified) throw new Error("OTP invalid") ;
-  let rawUser = userBody ;
-
-  // if(otp.sendingMethod == otpMethod.email){
-    if (await User.isEmailTaken(userBody.email)) {
-      throw new ApiError(httpStatus.BAD_REQUEST, 'Email already taken');
-    }
-    // rawUser['email'] = otp.receiverAddress
-    // rawUser['isEmailVerified'] = true
-  // }else{
-  //   if (await User.isPhoneTaken(otp.receiverAddress)) {
-  //     throw new ApiError(httpStatus.BAD_REQUEST, 'Phone already taken');
-  //   }
-  //   rawUser['phone'] = otp.receiverAddress
-  // }
-
+  let rawUser = userBody;
+  if (await User.isEmailTaken(userBody.email)) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'Email already taken');
+  }
   return User.create(rawUser);
 };
 

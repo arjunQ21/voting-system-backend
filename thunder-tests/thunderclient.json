@@ -2435,9 +2435,13 @@
     "method": "GET",
     "sortNum": 10000,
     "created": "2022-11-08T03:45:55.438Z",
-    "modified": "2022-11-08T03:46:06.021Z",
+    "modified": "2023-03-01T07:43:56.854Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{AUTH_TOKEN}}"
+    },
     "tests": []
   },
   {
@@ -2449,17 +2453,18 @@
     "method": "POST",
     "sortNum": 20000,
     "created": "2022-11-08T03:49:35.930Z",
-    "modified": "2022-11-08T10:49:03.411Z",
-    "headers": [],
+    "modified": "2023-03-01T05:49:42.158Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzY5Y2MyNWE5YzA5NTIyMWU0ODViMjUiLCJpYXQiOjE2Nzc2NDk0MzAsImV4cCI6MTY5NTY0OTQzMCwidHlwZSI6ImFjY2VzcyJ9.fWDQk45R8DUaAeWS7XDj8rc-QfxxWvGDZuExOeqR3g8"
+      }
+    ],
     "params": [],
     "body": {
       "type": "json",
       "raw": "{\n  \"title\": \"President of china\",\n  \"description\": \"Hey there\",\n  \"from\": 122,\n  \"to\": 23233232\n}",
       "form": []
-    },
-    "auth": {
-      "type": "bearer",
-      "bearer": "{{AUTH_TOKEN}}"
     },
     "tests": []
   },
@@ -2472,18 +2477,24 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-11-08T04:11:49.818Z",
-    "modified": "2022-11-09T03:29:19.751Z",
+    "modified": "2023-03-01T05:43:50.345Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n    \"email\": \"arjunadhikari789@gmail.com\",\n    \"password\": \"asdfasdf1\"\n}",
+      "raw": "{\n    \"email\": \"arjunq21@gmail.com\",\n    \"password\": \"asdfasdf1\"\n}",
       "form": []
     },
     "tests": [
       {
         "type": "set-env-var",
         "custom": "json.data.tokens.access.token",
+        "action": "setto",
+        "value": "{{AUTH_TOKEN}}"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.tokens.acces.token",
         "action": "setto",
         "value": "{{AUTH_TOKEN}}"
       }
@@ -2516,25 +2527,6 @@
     ]
   },
   {
-    "_id": "7e6ef9b4-feee-4725-83b2-aca8e91131f4",
-    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
-    "containerId": "13fafc1d-2e8b-4d58-9de4-beabf122e3b4",
-    "name": "Send verification email",
-    "url": "{{BASE_URL}}/auth/send-verification-email",
-    "method": "POST",
-    "sortNum": 150000,
-    "created": "2022-11-08T04:11:49.820Z",
-    "modified": "2022-11-08T04:11:49.818Z",
-    "headers": [
-      {
-        "name": "Authorization",
-        "value": "Bearer {{AUTH_TOKEN}}"
-      }
-    ],
-    "params": [],
-    "tests": []
-  },
-  {
     "_id": "a92c8ded-6ef3-423e-bd26-04803287dc42",
     "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
     "containerId": "13fafc1d-2e8b-4d58-9de4-beabf122e3b4",
@@ -2543,18 +2535,14 @@
     "method": "GET",
     "sortNum": 160000,
     "created": "2022-11-08T04:11:49.821Z",
-    "modified": "2022-11-08T04:11:49.818Z",
+    "modified": "2023-02-26T07:05:55.470Z",
     "headers": [
       {
         "name": "Authorization",
-        "value": "Bearer {{AUTH_TOKEN}}"
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzZhNDJmM2IxMzYwYzE2ZGVkYzRkMmIiLCJpYXQiOjE2NzczODgwMTUsImV4cCI6MTY5NTM4ODAxNSwidHlwZSI6ImFjY2VzcyJ9.uNJmhoO2SVK1pAoHlVSqlG2EtavqRHMbxCkl79AIErk"
       }
     ],
     "params": [],
-    "auth": {
-      "type": "bearer",
-      "bearer": "{{AUTH_TOKEN}}"
-    },
     "tests": []
   },
   {
@@ -2580,12 +2568,12 @@
     "method": "PUT",
     "sortNum": 20000,
     "created": "2022-11-08T05:15:44.315Z",
-    "modified": "2022-11-08T05:20:49.531Z",
+    "modified": "2023-03-02T06:48:12.641Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"title\": \"President of china\",\n  \"description\": \"Hey there\",\n  \"from\": 2,\n  \"to\": 23233232,\n  \"status\": \"hidden\"\n}",
+      "raw": "{\n  \"title\": \"President of china\",\n  \"description\": \"Hey there\",\n  \"from\": \"Mar 1, 2023\",\n  \"to\": 1677739585848,\n  \"status\": \"hidden\"\n}",
       "form": []
     },
     "auth": {

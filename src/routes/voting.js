@@ -97,7 +97,9 @@ singleVotingRouter.put(
     body('title').exists().withMessage('Title is required'),
     body('description').optional(),
     body('from').exists(),
-    body('to').exists(),
+    body('to').exists().custom(async function(to, {req}){
+      if (moment(to).isBefore(req.body.from)) throw new Error('To date must be after from date');
+    }),
     body('status').exists().withMessage('Status is required'),
   ],
   handleValidationErrors(),
