@@ -9,15 +9,19 @@
     "data": [
       {
         "name": "BASE_URL",
-        "value": "https://voting.padxu.com"
+        "value": "http://localhost:3000"
       },
       {
         "name": "AUTH_TOKEN",
-        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzY5Y2MyNWE5YzA5NTIyMWU0ODViMjUiLCJpYXQiOjE2Nzc2NDk0MzAsImV4cCI6MTY5NTY0OTQzMCwidHlwZSI6ImFjY2VzcyJ9.fWDQk45R8DUaAeWS7XDj8rc-QfxxWvGDZuExOeqR3g8"
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzY5Y2MyNWE5YzA5NTIyMWU0ODViMjUiLCJpYXQiOjE2Nzc4MTUzMDUsImV4cCI6MTY5NTgxNTMwNSwidHlwZSI6ImFjY2VzcyJ9.fMqqZ3Xf2ZSt-c8QuSUHLklqdzAWELygwn4-QNAhQck"
       },
       {
         "name": "VOTING_ID",
-        "value": "6369d41432caa833a24a2211"
+        "value": "6400bef9ac11444d0dfde4ea"
+      },
+      {
+        "name": "CANDIDATE_ID",
+        "value": "6400dcf1ac11444d0dfde928"
       }
     ]
   }
