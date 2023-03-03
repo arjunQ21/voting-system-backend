@@ -3708,5 +3708,24 @@
     "created": "2023-02-24T04:43:58.877Z",
     "modified": "2023-02-24T04:43:58.878Z",
     "headers": []
+  },
+  {
+    "_id": "e5402718-24bb-4e2c-a4b3-ab58f37941cd",
+    "colId": "9734ca5f-e47c-4719-b399-2d615454a2d3",
+    "containerId": "13fafc1d-2e8b-4d58-9de4-beabf122e3b4",
+    "name": "VerifyOTP",
+    "url": "{{BASE_URL}}/auth/otp/submit",
+    "method": "POST",
+    "sortNum": 37500,
+    "created": "2023-03-03T09:39:09.151Z",
+    "modified": "2023-03-03T09:40:07.716Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"receiverAddress\": \"aadarshabaral7@gmail.com\",\n  \"code\": \"28284\"\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]
